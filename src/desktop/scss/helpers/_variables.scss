@@ -1,8 +1,10 @@
 // Base
-$background-color:					#B4B3AC;
-$text-color:						white;
+$background-color:					white;
+$text-color:						black;
 $link-color:						black;
-$transition-duration:				0.4s;
+$theme-grey:						#a1a1a1;
+$theme-grey-dark:					#616161;
+$transition-duration:				0.2s;
 
 // https://github.com/ianrose/typesettings
 $base-vertical-unit: 				5px;
@@ -24,6 +26,5 @@ $breakpoints: (
   'mobile'  		: '#{$screen} ( max-width: 320px )',
   'small'  			: '#{$screen} ( min-width: 321px )  and ( max-width: 69.999em )',
   'medium' 			: '#{$screen} ( min-width: 70em ) and ( max-width: 84.999em )',
-  'large'  			: '#{$screen} ( min-width: 85em ) and ( max-width: 99.999em )',
-  'super-large' : '#{$screen} ( min-width: 100em )'
+  'large'  			: '#{$screen} ( min-width: 85em ) and ( max-width: 99.999em )'
 );

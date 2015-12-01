@@ -3,25 +3,14 @@ requirejs.config({
    	 jquery: 'vendors/jquery/jquery.min',
    	 domReady: 'modules/helpers/domready',
    	 text: 'modules/helpers/text',
-     underscore: 'vendors/underscore/underscore-min',
-     routes: 'modules/routes',
-     section: 'modules/sections/section'
+     underscore: 'vendors/underscore/underscore-min'
   }
 });
 
 require([
 	'!domReady',
-	'jquery',
-	'routes',
-	'section'
-	], function(domReady, $, routes, section) {
+	'jquery'
+	], function(domReady, $) {
 		$('html').removeClass('no-js').addClass('js');
-
-		section.init({
-			$container: $('body')
-		});
-
-		routes.init({});
-
 	}
 );

@@ -1,3 +1,140 @@
-.footer{
+$footer__navigation: (
+  	columns: 1 1 1 1 1 1 1,
+  	output: isolate
+);
 
+$footer__info: (
+ 	columns: 1 1 1 1 1 1 1,
+  	output: isolate,
+);
+
+$footer__contact: (
+  	columns: 1 1,
+  	output: isolate,
+);
+
+.footer{
+	border-top: 2px solid $theme-grey;
+	padding-top: 1em;
+
+	a{
+		@include nav_link();
+	}
+}
+
+.footer__navigation{	
+	@include layout($footer__navigation);
+	@extend %clearfix;
+}
+
+.footer__section{
+
+	&--c1{
+		@include span(at 1);
+	}
+
+	&--c2{
+		@include span(at 2);
+	}
+
+	&--c3{
+		@include span(at 3);
+	}
+
+	&--c4{
+		@include span(3 at 4);
+	}
+
+	&--c5{
+		@include span(at 7);
+
+	}
+}
+
+.footer__header{
+	margin-bottom: 1em;
+	text-transform: uppercase;
+}
+
+.footer__item{
+
+}
+
+.footer__link{
+	@include nav_link();
+}
+
+
+.footer__contact{
+	@include layout($footer__contact);
+	width: 100%;
+}
+
+.footer__address{
+
+	&--one{
+		@include span(1 first); 
+	}
+
+	&--two{
+		@include span(1 last); 
+	}
+
+	dt,
+	dd{
+		text-transform: uppercase;
+	}
+
+	dt{
+		display: inline;
+	}
+
+	a{
+		color: inherit;
+		text-decoration: none;
+	}
+}
+
+
+.footer__info{
+	@include layout($footer__info);
+	margin-top: 1em;
+}
+
+
+.footer__copy{
+	 @include span(3 at 1);
+	 text-transform: uppercase;
+}
+
+.footer__newsletter{
+	@include span(2 at 4);
+	position: relative;
+	top: -2.8em;
+}
+
+.footer__social{
+	@include span(at 7);
+	position: relative;
+ 	color: $theme-grey;
+ 	top: -3.8em;
+}
+
+.footer__social-item{
+	display: inline-block;
+	margin-right: .5em;
+}
+
+.footer__social-link{
+	color: inherit;
+	font-size: 1.6em;
+
+	&:hover{
+		color: $theme-grey-dark;
+	}
+}
+
+.footer__title{
+	 @include span(1 last); 
+	 text-align: right;
 }

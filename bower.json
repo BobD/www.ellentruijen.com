@@ -15,7 +15,8 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "~2.1.1"
+    "jquery": "~2.1.1",
+    "susy": "~2.2.7"
   },
   "devDependencies": {
     "underscore": "~1.7.0",

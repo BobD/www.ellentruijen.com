@@ -1,3 +1,28 @@
-<header class='header'>
-	{{> helpers/navigation active=active}}
+<header class="header">
+
+	<div class="header__main">
+	
+		<div class="header__logo">
+			ellen:truijen
+		</div>
+
+		<nav class='header__navigation'>
+		  	<ul class="navigation">
+		  		{{#each content.navigation}}
+					<li class="navigation__item" {{#menu_active ../active title}}{{/menu_active}}>
+						<a class="navigation__link" href='{{url}}'>{{title}}</a>
+					</li>
+		  		{{/each}}
+		  	</ul>
+		</nav>
+
+	</div>
+
+
+	<div class="header__sub">
+		<nav class='header__sub-navigation'>
+
+		</nav>
+	</div>
+
 </header>

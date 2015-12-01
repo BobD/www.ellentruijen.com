@@ -1,5 +1,13 @@
-.navigation{
-	> ul{
 
-	}
+.navigation{
+}
+
+.navigation__item{
+	display: inline-block;
+	margin-right: 2em;
+}
+
+.navigation__link{
+	@include nav_link();
+	line-height: 2em;
 }

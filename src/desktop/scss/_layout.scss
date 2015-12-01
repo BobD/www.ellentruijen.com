@@ -1,5 +1,7 @@
+@import "layout/sections/wrapper";
 @import "layout/sections/header";
 @import "layout/sections/main";
 @import "layout/sections/footer";
-@import "layout/responsive";
 @import "layout/rhythm";
+
+// @include sticky_footer(".wrapper", ".main");

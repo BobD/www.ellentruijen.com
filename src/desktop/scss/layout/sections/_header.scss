@@ -1,3 +1,42 @@
+$header: (
+  columns: 1.5 8,
+  output: isolate,
+);
+
 .header{
 
+}
+
+.header__main{
+	@extend %clearfix;
+	@include layout($header);
+	border-bottom: 2px solid $theme-grey;
+	padding: 1em 0;
+}
+
+.header__sub{
+
+}
+
+.header__logo,
+.header__navigation{
+	line-height: 30px;
+}
+
+.header__logo{
+	@include span(1 first); 
+
+	font-size: 2em
+}
+
+.header__navigation{
+	@include span(1 last); 
+
+	.navigation__link{
+		vertical-align: bottom;
+	}
+}
+
+.header__sub-navigation{
+	height: 2em;
 }

@@ -1,0 +1,11 @@
+// http://susy.oddbird.net/
+$susy: (
+  container: 1120px,
+  global-box-sizing: border-box
+);
+
+
+.wrapper{
+	@include container;
+	padding: 0 0 1em 0;
+}

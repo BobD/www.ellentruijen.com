@@ -1,65 +1,49 @@
-@mixin link(){
-
-  a{
-    text-decoration: none;
-    text-transform: capitalize;
-    color: inherit;
-    // transition: color 0.05s;
-
-    &:hover{
-      color: $active-link-color;
-    }
+// https://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/
+@mixin sticky_footer($wrapper, $content){
+  #{$wrapper}{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
   }
 
-	&[class$="active"]{
-		color: $active-link-color;
-	}
+  #{$content}{
+    flex: 1;
+  }
 }
 
-@mixin text-link($color: $text-color-dark){
-  a[href]{
-    text-decoration: none;
-    color: $color;
-    position: relative;
-    display: inline-block;
+@mixin nav_link(){
+  text-decoration: none;
+  text-transform: uppercase;
+  color: inherit;
+  display: inline-block;
+  position: relative;
 
-    // http://codepen.io/acusti/pen/gbabKQ
-    // background-image: linear-gradient(rgba(#000, 0.25) 0%, #000 100%);
-    // background-repeat: repeat-x;
-    // background-size: 1px 1px;
-    // background-position: 0 78%;
-    // text-shadow: 3px 0 #83afb0, 2px 0 #83afb0, 1px 0 #83afb0, -1px 0 #83afb0, -2px 0 #83afb0, -3px 0 #83afb0;
-
+  
+  &:before{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: $theme-grey;
+    transition: width $transition-duration;
+  }
+  
+  .active &,
+  &:hover{
     &:before{
-      content: '';
-      display: inline-block;
-      position: absolute;
-      bottom: 3px;
-      left: 0;
-      right: 0;
-      border-bottom: thin solid $color;
+      width: 100%;
+    }
+  }
+
+  .active &:hover{
+    &:before{
+      width: 100% !important;
     }
   }
 }
-
-@mixin box-padding($side_multiplier: 1){
-  padding: emRhythm(1) emRhythm($side_multiplier);
-}
-
-@mixin box-style($side_multiplier: 1){
-  @include box-padding($side_multiplier);
-}
-
-// http://thesassway.com/intermediate/responsive-web-design-in-sass-using-media-queries-in-sass-32
-@mixin tweak-points($point) {
-
-  @if $point == small {
-    @media (max-width: 1600px) { @content; }
-  }
-
-}
-
-
 
 // ----
 // http://www.sitepoint.com/managing-responsive-breakpoints-sass/
@@ -92,43 +76,5 @@
     @warn "Unfortunately, no value could be retrieved from `#{$name}`. "
         + "Please make sure it is defined in `$breakpoints` map. "
         + "Or pass the media query as a second parameter to add it to the map.";
-  }
-}
-
-@mixin vertical-dash(){
-  &:after{
-    content: '';
-    display: inline-block;
-    height: emRhythm(3);
-    border-right: thin solid white;
-    vertical-align: middle;
-    margin: 0 3px;
-  }
-
-  &:last-child{
-    &:after{
-      display: none;
-    }
-  }
-}
-
-@mixin horizontal-dash($bottom: - emRhythm(0.5)){
-  position: relative;
-  &:before{
-    content: '';
-    display: block;
-    position: absolute;
-    bottom: $bottom;
-    left: 0;
-    right: 0;
-    border-bottom: thin solid white;
-  }
-}
-
-%clearfix {
-  &:after {
-    content: "";
-    display: table;
-    clear: both;
   }
 }

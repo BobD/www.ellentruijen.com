@@ -1,3 +1,143 @@
-<footer class='footer'>
+<footer class="footer">
+
+	<section class="footer__navigation footer__navigation">
+
+		<nav class="footer__section footer__section--c1">
+			<header class="footer__header">{{content.footer.products.label}}</header>
+			<ul class="footer__list">
+				{{#each content.footer.products.items}}
+					<li class="footer__item">
+						<a class="footer__link" href="{{href}}">{{label}}</a>
+					</li>
+				{{/each}}
+			</ul>
+		</nav>
+
+		<nav class="footer__section footer__section--c2">
+			<header class="footer__header">{{content.footer.ellentruijen.label}}</header>
+			<ul class="footer__list">
+				{{#each content.footer.ellentruijen.items}}
+					<li class="footer__item">
+						<a class="footer__link" href="{{href}}">{{label}}</a>
+					</li>
+				{{/each}}
+			</ul>
+		</nav>
+
+		<nav class="footer__section footer__section--c3">
+			<header class="footer__header">{{content.footer.service.label}}</header>
+			<ul class="footer__list">
+				{{#each content.footer.service.items}}
+					<li class="footer__item">
+						<a class="footer__link" href="{{href}}">{{label}}</a>
+					</li>
+				{{/each}}
+			</ul>
+		</nav>
+
+		<nav class="footer__section footer__section--c4">
+			<header class="footer__header">Contact</header>
+			
+			<div class="footer__contact">
+				
+				<dl class="footer__address footer__address--one">
+					<dt></dt> 
+					<dd>Ellen:Truijen Headoffice</dd>
+					<dt></dt> 
+					<dd>Frankenstraat 195 - 197</dd>
+					<dt></dt> 
+					<dd>6224 GP Maastricht</dd>
+					<dt></dt> 
+					<dd>The Netherlands</dd>
+					<dt></dt> 
+					<dd>
+						<i class="icon fa fa-phone"></i>
+						<span>+31 (0)43 3611343</span>
+					</dd>
+					<dt></dt> 
+					<dd>
+						<a href="mailto:info@ellentruijen.com">info@ellentruijen.com</a>
+					</dd>
+				</dl>
+
+				<dl class="footer__address  footer__address--two">
+					<dt></dt> 
+					<dd>E:T Brandstore</dd>
+					<dt></dt> 
+					<dd>Frankenstraat 195</dd>
+					<dt></dt> 
+					<dd>Maastricht</dd>
+					<dt></dt> 
+					<dd>The Netherlands</dd>
+					<dt></dt> 
+					<dd>
+						<i class="icon fa fa-phone"></i>
+						<span>+31 (0)43 3611343</span>
+					</dd>
+					<dt></dt> 
+					<dd>
+						<a href="mailto:store@ellentruijen.com">store@ellentruijen.com</a>
+					</dd>
+				</dl>
+
+			</div>
+		</nav>
+
+		<nav class="footer__section footer__section--c5">
+			<header class="footer__header">{{content.footer.social.label}}</header>
+			
+			<ul class="footer__list">
+				{{#each content.footer.social.items}}
+					<li class="footer__item">
+						<a class="footer__link" href="{{href}}">{{label}}</a>
+					</li>
+				{{/each}}
+			</ul>
+
+		</nav>
+
+	</section>
+
+	<section class="footer__info">
+
+		<div class="footer__copy">
+			<i class="icon fa fa-copyright"></i>
+			<span>Ellen Truijen Bags Maastricht</span>
+		</div>
+
+		<div class="footer__newsletter">
+			<a href="">
+				Subscribe to our newsletter
+			</a>
+		</div>
+
+		<ul class="footer__social">
+			<li class="footer__social-item">
+				<a class="footer__social-link" href="">
+					<i class="icon fa fa-instagram"></i>
+				</a>
+			</li>
+			<li class="footer__social-item">
+				<a class="footer__social-link" href="">
+					<i class="icon fa fa-pinterest"></i>
+				</a>
+			</li>
+			<li class="footer__social-item">
+				<a class="footer__social-link" href="">
+					<i class="icon fa fa-facebook"></i>
+				</a>
+			</li>
+			<li class="footer__social-item">
+				<a class="footer__social-link" href="">
+					<i class="icon fa fa-twitter"></i>
+				</a>
+			</li>
+		</ul>
+
+		<div class="footer__title">
+			{{!-- H1 Titel Pagina --}}
+		</div>
+
+	</section>
 
 </footer>

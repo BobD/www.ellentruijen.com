@@ -1,3 +1,76 @@
-.main{
+@mixin block-offset-top($offset: 40%){
+	&:before {
+    	display: block;
+    	content: "";
+    	width: 100%;
+    	padding-top: #{$offset};
+  	}
+}
 
+
+$column-2: (
+  columns: 2,
+  gutters: .1
+);
+
+.main{
+	min-height: 100px;
+}
+
+.main__section{
+	@extend %clearfix;
+	margin: 2em 0;
+	width: 100%;
+}
+
+.main__section{
+
+	&--block{
+		&-small{
+			.main__block{
+				width: 75%;
+				margin: 0 auto;
+			}
+		}
+	}
+
+	&--column-vlist{
+
+	}
+
+	&--column-1{
+
+	}
+
+	&--column-2{
+		@include layout($column-2);
+
+		.main__block{
+
+			&:first-child{
+				@include span(1 at 1);
+			}
+
+			&:last-child{
+				&:not(:first-child){
+					@include span(1 at 2);
+				}
+			}
+		}
+
+		&.main__section--offset{
+
+			.main__block{
+				&:last-child{
+					&:not(:first-child){
+						@include block-offset-top('40%');
+					}
+				}
+			}
+		}
+	}
+}
+
+.main__block{
+	position: relative;
 }

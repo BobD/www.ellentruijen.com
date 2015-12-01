@@ -1,7 +1,66 @@
 {
 	"navigation": [
-		{"title": "home", "url": "/"},
-		{"title": "about", "url": "/about/"},
-		{"title": "contact", "url": "/contact/"}
-	]
+		{"title": "Shop", "url": "/"},
+		{"title": "Ellentruijen", "url": "/"},
+		{"title": "ET Loves", "url": "/"}
+	],
+
+	"footer": {
+
+		"products": {
+			"label": "Products",
+			"items": [
+				{"label": "Shoulder Bags", "href": ""},
+				{"label": "Totes", "href": ""},
+				{"label": "Wallets", "href": ""},
+				{"label": "Accessories", "href": ""},
+				{"label": "Clothing", "href": ""},
+				{"label": "Jewelry", "href": ""},
+				{"label": "Home", "href": ""},
+				{"label": "Women", "href": ""},
+				{"label": "Men", "href": ""}
+			]
+		},
+
+		"ellentruijen": {
+			"label": "Ellen Truijen",
+			"items": [
+				{"label": "about", "href": ""},
+				{"label": "Campaign", "href": ""},
+				{"label": "Brandstore", "href": ""},
+				{"label": "Side Projects", "href": ""},
+				{"label": "ET Vintage", "href": ""},
+				{"label": "ET Care", "href": ""},
+				{"label": "Press", "href": ""},
+				{"label": "Stores", "href": ""},
+				{"label": "Contact", "href": ""}
+			]
+		},
+
+		"service": {
+			"label": "Service",
+			"items": [
+				{"label": "Orders", "href": ""},
+				{"label": "Payment", "href": ""},
+				{"label": "Shipping", "href": ""},
+				{"label": "Returns & Exchanges", "href": ""},
+				{"label": "Guarantee", "href": ""},
+				{"label": "Privacy", "href": ""},
+				{"label": "Legal", "href": ""},
+				{"label": "Terms & Conditions", "href": ""},
+				{"label": "Sitemap", "href": ""}
+			]
+		},
+
+		"social": {
+			"label": "Social Media",
+			"items": [
+				{"label": "Instagram", "href": ""},
+				{"label": "Pinterest", "href": ""},
+				{"label": "Facebook", "href": ""},
+				{"label": "Twitter", "href": ""}
+			]
+		}
+
+	}
 }
