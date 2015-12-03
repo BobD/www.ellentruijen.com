@@ -4,14 +4,13 @@ $header: (
 );
 
 .header{
-
 }
 
 .header__main{
 	@extend %clearfix;
+	@extend %divider-bottom;
 	@include layout($header);
-	border-bottom: 2px solid $theme-grey;
-	padding: 1em 0;
+	padding: 3em 0 2em 0;
 }
 
 .header__sub{
@@ -26,7 +25,12 @@ $header: (
 .header__logo{
 	@include span(1 first); 
 
-	font-size: 2em
+	font-size: 2.5em
+}
+
+.header__logo-link{
+	color: inherit;
+	text-decoration: none;
 }
 
 .header__navigation{
@@ -37,6 +41,13 @@ $header: (
 	}
 }
 
-.header__sub-navigation{
-	height: 2em;
+.header__pages{
+	@extend %clearfix;
+	@include layout($header);
+	height: $row-v-margin;
+}
+
+.header__pages-list{
+	@include span(1 last); 
+	line-height: $row-v-margin;
 }

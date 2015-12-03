@@ -30,7 +30,7 @@
     background: $theme-grey;
     transition: width $transition-duration;
   }
-  
+
   .active &,
   &:hover{
     &:before{

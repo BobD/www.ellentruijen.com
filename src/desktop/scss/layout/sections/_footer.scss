@@ -14,8 +14,8 @@ $footer__contact: (
 );
 
 .footer{
-	border-top: 2px solid $theme-grey;
-	padding-top: 1em;
+	@extend %divider-top;
+	padding-top: 2em;
 
 	a{
 		@include nav_link();

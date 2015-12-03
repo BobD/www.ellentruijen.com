@@ -1,7 +1,18 @@
+
+$divider: thin solid $theme-grey;
+
 %clearfix {
   &:after {
     content: "";
     display: table;
     clear: both;
   }
+}
+
+%divider-top {
+	border-top: $divider;
+}
+
+%divider-bottom {
+	border-bottom: $divider;
 }

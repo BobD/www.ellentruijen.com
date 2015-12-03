@@ -1,9 +1,31 @@
 {
 	"navigation": [
-		{"title": "Shop", "url": "/"},
-		{"title": "Ellentruijen", "url": "/"},
-		{"title": "ET Loves", "url": "/"}
+		{"id": "shop", "title": "Shop", "url": "/pages/shop/index.html"},
+		{"id": "ellentruijen",  "title": "Ellentruijen", "url": "/pages/ellentruijen/index.html"},
+		{"id": "etloves", "title": "ET Loves", "url": "/pages/etloves/index.html"}
 	],
+
+	"pages": {
+		"ellentruijen": [
+			{"id": "about", "title": "About", "url": "/pages/ellentruijen/about.html"},
+			{"id": "campaign", "title": "Campaign", "url": "/ellentruijen/campaign"},
+			{"id": "brandstore", "title": "Brandstore", "url": "/ellentruijen/brandstore"},
+			{"id": "side_projects", "title": "Side Projects", "url": "/ellentruijen/side-projects"},
+			{"id": "et_vintage", "title": "ET Vintage", "url": "/ellentruijen/et_vintage"},
+			{"id": "et_care", "title": "ET Care", "url": "/ellentruijen/et_care"},
+			{"id": "press", "title": "Press", "url": "/ellentruijen/press"},
+			{"id": "stores", "title": "Stores", "url": "/ellentruijen/stores"},
+			{"id": "contact", "title": "Contact", "url": "/ellentruijen/contact"}
+		],
+		"etloves": [
+			{"id": "fashion_story", "title": "Fashion Story", "url": "/ellentruijen/fashion-story"},
+			{"id": "lovely_house", "title": "Lovely House", "url": "/ellentruijen/lovely-house"},
+			{"id": "chin_up", "title": "Chin Up", "url": "/ellentruijen/chin-up"},
+			{"id": "art_fart", "title": "Art Fart", "url": "/ellentruijen/art-fart"},
+			{"id": "eat_your_heart_out", "title": "Eat Your Heart Out", "url": "/ellentruijen/eat-your-heart-out"},
+			{"id": "hello_goodbye", "title": "Hello Goodbye", "url": "/ellentruijen/hello-goodbye"}
+		]
+	},
 
 	"footer": {
 

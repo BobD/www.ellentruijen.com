@@ -1,0 +1,16 @@
+.grid__item{
+	background-size: cover;
+	background-repeat: none;
+	background-position: center center;
+	padding: 1em;
+
+	&:hover{
+		.grid__header{
+			display: block;
+		}
+	}
+}
+
+.grid__header{
+	display: none;
+}

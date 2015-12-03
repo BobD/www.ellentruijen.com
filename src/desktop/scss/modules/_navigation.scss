@@ -5,6 +5,10 @@
 .navigation__item{
 	display: inline-block;
 	margin-right: 2em;
+
+	&--active{
+		
+	}
 }
 
 .navigation__link{

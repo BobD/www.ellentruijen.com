@@ -3,13 +3,15 @@
 	<div class="header__main">
 	
 		<div class="header__logo">
-			ellen:truijen
+			<a class="header__logo-link" href="/">
+				ellen:truijen
+			</a>
 		</div>
 
 		<nav class='header__navigation'>
 		  	<ul class="navigation">
 		  		{{#each content.navigation}}
-					<li class="navigation__item" {{#menu_active ../active title}}{{/menu_active}}>
+					<li class="navigation__item {{#menu_active ../active id}}{{/menu_active}}">
 						<a class="navigation__link" href='{{url}}'>{{title}}</a>
 					</li>
 		  		{{/each}}
@@ -19,9 +21,15 @@
 	</div>
 
 
-	<div class="header__sub">
-		<nav class='header__sub-navigation'>
-
+	<div class="header__pages">
+		<nav class='header__pages-list'>
+			<ul class="navigation">
+			{{#each pages}}
+				<li class="navigation__item {{#menu_active ../page id}}{{/menu_active}}">
+					<a class="navigation__link" href='{{url}}'>{{title}}</a>
+				</li>
+			{{/each}}
+			</ul>
 		</nav>
 	</div>
 

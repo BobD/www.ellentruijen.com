@@ -3,20 +3,36 @@
 	width: 100%;
 }
 
-.article__header{
-
-}
-
-.article__body{
-
+.article__image-container{
+	margin-bottom: .8em;
 }
 
 .article__image{
 	width: 100%;
 }
 
-.article__footer{
+.article__header{
+	margin-bottom: .8em;
+}
 
+.article__title{
+	font-size: 110%;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+
+.article__body{
+	p{
+		margin-bottom: 1em;
+	}
+
+	> strong{
+		display: block;
+	}
+}
+
+.article__footer{
+	margin-top: 1em;
 }
 
 .article__link{

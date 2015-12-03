@@ -8,10 +8,15 @@
 }
 
 
-$column-2: (
-  columns: 2,
-  gutters: .1
-);
+$column-2: (columns: 2, gutters: .1);
+$column-3: (columns: 3, gutters: .1);
+$column-4: (columns: 4, gutters: .1);
+$column-5: (columns: 5, gutters: .1);
+$column-6: (columns: 6, gutters: .1);
+$column-7: (columns: 7, gutters: .1);
+$column-8: (columns: 8, gutters: .1);
+$column-9: (columns: 9, gutters: .1);
+$column-10: (columns: 10, gutters: .1);
 
 .main{
 	min-height: 100px;
@@ -19,53 +24,69 @@ $column-2: (
 
 .main__section{
 	@extend %clearfix;
-	margin: 2em 0;
+	margin: $row-v-margin 0;
 	width: 100%;
+
+	&:first-child{
+		margin-top: 0;
+	}
+
 }
 
 .main__section{
 
-	&--block{
-		&-small{
-			.main__block{
-				width: 75%;
-				margin: 0 auto;
-			}
-		}
+	&--jumbo{
 	}
 
-	&--column-vlist{
-
-	}
-
-	&--column-1{
-
-	}
-
-	&--column-2{
-		@include layout($column-2);
-
+	&--small{
 		.main__block{
+			width: 75%;
+			margin: 0 auto;
+		}
+	}
 
-			&:first-child{
-				@include span(1 at 1);
-			}
+	&--column-2{@include layout($column-2);}
+	&--column-3{@include layout($column-3);}
+	&--column-4{@include layout($column-4);}
+	&--column-5{@include layout($column-5);}
+	&--column-6{@include layout($column-6);}
+	&--column-7{@include layout($column-7);}
+	&--column-8{@include layout($column-8);}
+	&--column-9{@include layout($column-9);}
+	&--column-10{@include layout($column-10);}
 
-			&:last-child{
-				&:not(:first-child){
-					@include span(1 at 2);
-				}
+	@for $i from 1 through 10{
+		&--column-#{$i}{
+			.main__block{
+				 @include gallery(1 of $i);
 			}
 		}
+	}
 
-		&.main__section--offset{
+	&--offset{
+		.main__block{
+			&:nth-child(even){
+				@include block-offset-top('40%');
+			}
+		}
+	}
 
-			.main__block{
-				&:last-child{
-					&:not(:first-child){
-						@include block-offset-top('40%');
-					}
-				}
+	&--grid{
+		.main__block{
+			// http://www.mademyday.de/css-height-equals-width-with-pure-css.html
+			&:before {
+			  	display: block;
+			  	content: "";
+			  	width: 100%;
+			  	padding-top: 100%;
+			}
+
+			.grid__item{
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
 			}
 		}
 	}
