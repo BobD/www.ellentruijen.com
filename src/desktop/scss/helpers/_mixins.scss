@@ -45,6 +45,24 @@
   }
 }
 
+@mixin ratio_block($content, $ratio: 100%){
+    // http://www.mademyday.de/css-height-equals-width-with-pure-css.html
+  &:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: $ratio;
+  }
+
+  #{$content}{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+
 // ----
 // http://www.sitepoint.com/managing-responsive-breakpoints-sass/
 // http://sassmeister.com/gist/0614ac3971ae82925ef4

@@ -36,10 +36,9 @@ module.exports = function(grunt) {
        files: [
           {expand: true, cwd: 'src/desktop/images/', src: ['**/*.*'], dest: 'build/desktop/images', filter: 'isFile'},
           {expand: true, cwd: 'src/desktop/scripts', src: ['**/*.*'], dest: 'build/desktop/scripts', filter: 'isFile'},
-          {expand: true, cwd: 'bower_components/jquery/dist/', src: ['jquery.min.*'], dest: 'build/desktop/scripts/vendors/jquery', filter: 'isFile'},
-          {expand: true, cwd: 'bower_components/underscore/', src: ['underscore-min.*'], dest: 'build/desktop/scripts/vendors/underscore', filter: 'isFile'},
-          {src: 'bower_components/fastclick/lib/fastclick.js',  dest: 'build/desktop/scripts/vendors/fastclick.js'},
-          {src: 'src/desktop/html/backgroundsize.min.htc',  dest: 'build/desktop/backgroundsize.min.htc'}
+          {expand: true, cwd: 'bower_components/', src: ['**/*.*'], dest: 'build/desktop/scripts/vendors', filter: 'isFile'},
+          {src: 'src/desktop/html/backgroundsize.min.htc',  dest: 'build/desktop/backgroundsize.min.htc'},
+          {src: 'src/desktop/html/.htaccess',  dest: 'build/desktop/.htaccess'}
         ]
       },
       mobile: {
@@ -135,7 +134,7 @@ module.exports = function(grunt) {
         livereload: true
       },
       desktop: {
-        files: ['src/desktop/**/*.*', 'Gruntfile.js', 'tasks/**/*.js'],
+        files: ['src/desktop/**/*.*', 'Gruntfile.js', 'tasks/**/*.js', "**/.htaccess"],
         tasks: ['desktop']
       },
       mobile: {

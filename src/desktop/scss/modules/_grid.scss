@@ -1,7 +1,13 @@
+.grid{
+
+}
+
 .grid__item{
-	background-size: cover;
-	background-repeat: none;
-	background-position: center center;
+	@include ratio_block('.grid__content');
+}
+
+.grid__content{
+	@extend %background-image;
 	padding: 1em;
 
 	&:hover{

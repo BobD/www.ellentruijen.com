@@ -1,13 +1,3 @@
-@mixin block-offset-top($offset: 40%){
-	&:before {
-    	display: block;
-    	content: "";
-    	width: 100%;
-    	padding-top: #{$offset};
-  	}
-}
-
-
 $column-2: (columns: 2, gutters: .1);
 $column-3: (columns: 3, gutters: .1);
 $column-4: (columns: 4, gutters: .1);
@@ -34,17 +24,6 @@ $column-10: (columns: 10, gutters: .1);
 }
 
 .main__section{
-
-	&--jumbo{
-	}
-
-	&--small{
-		.main__block{
-			width: 75%;
-			margin: 0 auto;
-		}
-	}
-
 	&--column-2{@include layout($column-2);}
 	&--column-3{@include layout($column-3);}
 	&--column-4{@include layout($column-4);}
@@ -59,34 +38,6 @@ $column-10: (columns: 10, gutters: .1);
 		&--column-#{$i}{
 			.main__block{
 				 @include gallery(1 of $i);
-			}
-		}
-	}
-
-	&--offset{
-		.main__block{
-			&:nth-child(even){
-				@include block-offset-top('40%');
-			}
-		}
-	}
-
-	&--grid{
-		.main__block{
-			// http://www.mademyday.de/css-height-equals-width-with-pure-css.html
-			&:before {
-			  	display: block;
-			  	content: "";
-			  	width: 100%;
-			  	padding-top: 100%;
-			}
-
-			.grid__item{
-				position: absolute;
-				top: 0;
-				right: 0;
-				bottom: 0;
-				left: 0;
 			}
 		}
 	}

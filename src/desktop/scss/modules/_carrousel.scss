@@ -1,0 +1,82 @@
+.carrousel{	
+	position: relative;
+
+	.slick-list,
+	.slick-track{
+		width: 100%;
+		height: 100%;
+	}
+
+	.slick-arrow{
+		position: absolute;
+		top: 50%;
+		margin-top: -1em;
+		z-index: 1;
+		border: none;
+    	outline: none;
+    	background: transparent;
+    	color: transparent;
+
+    	&:before{
+    		font-family: FontAwesome;
+    		font-size: 2em;
+    		color: white;
+    	}
+
+		&.slick-next{
+			right: 1em;
+
+			&:before{
+				// http://fortawesome.github.io/Font-Awesome/icon/chevron-right/
+				content: "\f054";
+			}
+		}
+
+		&.slick-prev{
+			left: 1em;
+
+			&:before{
+				// http://fortawesome.github.io/Font-Awesome/icon/chevron-left/
+				content: "\f053";
+			}
+		}
+	}
+}
+
+.carrousel__list{
+}
+
+.carrousel__item{
+	display: inline-block;
+	height: 100%;
+	width: 100%;
+	margin-right: 2em;
+}
+
+.carrousel__block{
+	@extend %background-image;
+	height: 100%;
+	width: 100%;
+}
+
+.carrousel{
+
+	.js &{
+		// visibility: hidden;
+	}
+
+	&--default{
+		.carrousel__item{
+			min-height: 400px;
+			.carrousel__block{
+				min-height: inherit;
+			}
+		}
+	}
+
+	&--slicked{
+		@include ratio_block('.carrousel__list', 66%);
+		// visibility: visible !important;
+	}
+
+}

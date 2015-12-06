@@ -1,16 +1,34 @@
 requirejs.config({
    paths: {
-   	 jquery: 'vendors/jquery/jquery.min',
-   	 domReady: 'modules/helpers/domready',
+   	 jquery: 'vendors/jquery/dist/jquery.min',
+     underscore: 'vendors/underscore/underscore-min',
+     fastclick: 'vendors/fastclick/lib/fastclick',
+     slick: 'vendors/slick-carousel/slick/slick.min',
+   	 domready: 'modules/helpers/domready',
    	 text: 'modules/helpers/text',
-     underscore: 'vendors/underscore/underscore-min'
   }
 });
 
 require([
-	'!domReady',
-	'jquery'
-	], function(domReady, $) {
+	'!domready',
+	'jquery',
+  'fastclick',
+  'slick'
+	], function(domReady, $, FastClick) {
 		$('html').removeClass('no-js').addClass('js');
+      FastClick.attach(document.body);
+
+      if($('.carrousel__list').slick){
+        $('.carrousel').addClass('carrousel--slicked');
+        $('.carrousel').removeClass('carrousel--default');
+
+        $('.carrousel__list').slick({
+          autoplay: true,
+          speed: 400,
+          pauseOnHover: true,
+          easing: 'swing'
+        });
+      }
+
 	}
 );

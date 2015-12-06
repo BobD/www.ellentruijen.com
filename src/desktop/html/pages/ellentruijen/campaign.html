@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+    {{> head}}
+
+    <body class=''>
+
+    	<div class="wrapper">
+
+	        {{> sections/header active='ellentruijen' pages=content.pages.ellentruijen  page='campaign'}}
+
+	        <main class="main">
+
+	        	<section class="main__section">
+				
+					<div class="carrousel carrousel--default">
+						<ul class="carrousel__list">
+							<li class="carrousel__item">
+								<div class="carrousel__block" style="background-image:url('images/summer_01.jpg')">
+								</div>
+							</li>
+							<li class="carrousel__item">
+								<div class="carrousel__block" style="background-image:url('images/summer_02.jpg')">
+								</div>
+							</li>
+							<li class="carrousel__item">
+								<div class="carrousel__block" style="background-image:url('images/summer_03.jpg')">
+								</div>
+							</li>
+						</ul>
+					</div>
+
+				</section>
+
+			</main>
+
+	        {{> sections/footer}}
+
+        </div>
+
+    </body>
+
+</html>
