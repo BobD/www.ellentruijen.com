@@ -1,6 +1,5 @@
 $header: (
-  columns: 1.5 8,
-  output: isolate,
+  columns: 1.5 8
 );
 
 .header{
@@ -45,9 +44,43 @@ $header: (
 	@extend %clearfix;
 	@include layout($header);
 	height: $row-v-margin;
+	margin-bottom: $row-v-margin / 2;
 }
 
 .header__pages-list{
 	@include span(1 last); 
 	line-height: $row-v-margin;
+}
+
+@include respond-to(small) {
+	$header: (
+  		columns: 3 8
+	);
+
+	$pages: (
+  		columns: 12
+	);
+
+	.header__main{
+		@include layout($header);
+	}
+
+	.header__logo{
+		@include span(1 first); 
+	}
+
+	.header__navigation{
+		@include span(1 last); 
+	}
+
+	.header__pages{
+		@include layout($pages); 
+	}
+
+	.header__pages-list{
+		@include span(12 at 1); 
+		.navigation__item {
+			margin-right: 1em;
+		}
+	}
 }

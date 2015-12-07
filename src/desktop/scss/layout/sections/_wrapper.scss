@@ -9,3 +9,15 @@ $susy: (
 	@include container;
 	padding: 0 0 1em 0;
 }
+
+@include respond-to(mobile) {
+	.wrapper{
+		padding: 0 1em;
+	}
+}
+
+@include respond-to(small) {
+	.wrapper{
+		padding: 0 2em;
+	}
+}

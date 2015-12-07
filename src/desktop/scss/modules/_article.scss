@@ -1,3 +1,7 @@
+$article--excerpt-header: (
+	columns: 4
+);
+
 .article{
 	text-align: center;
 	width: 100%;
@@ -9,15 +13,20 @@
 
 .article__image{
 	width: 100%;
+	display: block;
 }
 
 .article__header{
-	margin-bottom: .8em;
+	margin: 1.5em 0 1em 0;
+
+	&:first-child{
+		margin-top: 0;
+	}
 }
 
 .article__title{
-	font-size: 110%;
-	font-weight: normal;
+	@include font-regular();
+	font-size: inherit;
 	text-transform: uppercase;
 }
 
@@ -28,6 +37,19 @@
 
 	> strong{
 		display: block;
+	}
+
+	a{
+		@include nav-link();
+	}
+
+	img{
+		width: 100%;
+		display: block;
+	}
+
+	> *{
+		margin-bottom: 2em;
 	}
 }
 
@@ -40,5 +62,40 @@
 }
 
 .article{
+
+	&--excerpt,
+	&--full{
+		width: 90%;
+		margin: 0 auto;
+		text-align: left;
+
+		.article__header{
+			@include layout($article--excerpt-header);
+			@extend %clearfix;
+		}
+
+		.article__title{
+			@include span(3 at 1);
+			@include font-bold();
+			font-size: inherit;
+		}
+
+		.article__date{
+			@include span(1 at 4);
+			@include font-bold();
+			text-align: right;
+			font-size: inherit;
+		}
+	}
 	
+}
+
+@include respond-to(small) {
+	.article{
+
+		&--excerpt,
+		&--full{
+			width: 100%;
+		}
+	}
 }

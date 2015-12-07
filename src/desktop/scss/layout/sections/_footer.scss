@@ -1,16 +1,16 @@
 $footer__navigation: (
-  	columns: 1 1 1 1 1 1 1,
-  	output: isolate
+  	columns: 7,
+  	output: float
 );
 
 $footer__info: (
- 	columns: 1 1 1 1 1 1 1,
-  	output: isolate,
+ 	columns: 7,
+  	output: float,
 );
 
 $footer__contact: (
-  	columns: 1 1,
-  	output: isolate,
+  	columns: 2,
+  	output: float,
 );
 
 .footer{
@@ -28,27 +28,11 @@ $footer__contact: (
 }
 
 .footer__section{
-
-	&--c1{
-		@include span(at 1);
-	}
-
-	&--c2{
-		@include span(at 2);
-	}
-
-	&--c3{
-		@include span(at 3);
-	}
-
-	&--c4{
-		@include span(3 at 4);
-	}
-
-	&--c5{
-		@include span(at 7);
-
-	}
+	&--c1{@include span(1 at 1);}
+	&--c2{@include span(1 at 2);}
+	&--c3{@include span(1 at 3);}
+	&--c4{@include span(3 at 4);}
+	&--c5{@include span(1 at 7);}
 }
 
 .footer__header{
@@ -114,7 +98,7 @@ $footer__contact: (
 }
 
 .footer__social{
-	@include span(at 7);
+	@include span(1 at 7);
 	position: relative;
  	color: $theme-grey;
  	top: -3.8em;
@@ -137,4 +121,47 @@ $footer__contact: (
 .footer__title{
 	 @include span(1 last); 
 	 text-align: right;
+}
+
+
+@include respond-to(small) {
+	$footer__tablet: (
+		columns: 3,
+		container: 100%,
+		output: float
+	);
+
+	.footer__navigation{
+		@include layout($footer__tablet);
+	}
+
+	.footer__section{
+		&--c1{@include span(1 at 1);}
+		&--c2{@include span(1 at 2);}
+		&--c3{@include span(1 at 3);}
+		&--c4{@include span(2 at 1);}
+		&--c5{@include span(1 at 3);}
+	}
+
+	.footer__info{
+		@include layout($footer__tablet);
+		margin-top: 2em;
+	}
+
+	.footer__copy{
+		@include span(1 at 1);
+	}
+
+	.footer__newsletter{
+		@include span(1 at 2);
+		top: 0;
+	}
+
+	.footer__social{
+		@include span(1 at 3);
+		top: 0;
+		text-align: right;
+		font-size: 1.5em;
+	}
+
 }

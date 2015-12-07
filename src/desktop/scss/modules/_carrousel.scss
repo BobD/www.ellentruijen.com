@@ -1,10 +1,19 @@
+$carrousel__footer: (
+  	columns: 3
+);
+
+// $carrousel__item__grid_3 (
+//   	columns: 3,
+//   	gutters: 0
+// );
+
+
 .carrousel{	
 	position: relative;
 
 	.slick-list,
 	.slick-track{
 		width: 100%;
-		height: 100%;
 	}
 
 	.slick-arrow{
@@ -48,35 +57,97 @@
 
 .carrousel__item{
 	display: inline-block;
-	height: 100%;
 	width: 100%;
-	margin-right: 2em;
+	margin-bottom: $row-v-margin;
+
+
+	// &--grid-2{
+	// 	@include layout($carrousel__item__grid_2);
+
+	// 	.carrousel__block{
+
+	// 		&--0{
+	// 			@include span(1 at 1);
+	// 		}
+
+	// 		&--1{
+	// 			@include span(1 at 2);
+	// 		}
+	// 	}
+
+	// }
+
 }
 
 .carrousel__block{
 	@extend %background-image;
-	height: 100%;
+	position: relative;
 	width: 100%;
+}
+
+.carrousel__label{
+	position: absolute;
+	color: white;
+	font-size: 110%;
+}
+
+.carrousel__label-link{
+	color: inherit;
+	text-decoration: none;
+}
+
+.carrousel__image{
+	width: 100%;
+}
+
+.carrousel__footer{
+	@include layout($carrousel__footer);
+}
+
+.carrousel__description{
+	@include span(1 at 1);
+
+	h2{
+		font-size: inherit;
+		font-weight: normal;
+		margin-bottom: 1em;
+	}
+
+	a{
+		color: inherit;
+		text-transform: uppercase;
+	}
+}
+
+.carrousel__item-description{
+	@include span(2 at 2);
+	text-align: right;
 }
 
 .carrousel{
 
 	.js &{
-		// visibility: hidden;
+		display: none;
 	}
 
 	&--default{
-		.carrousel__item{
-			min-height: 400px;
-			.carrousel__block{
-				min-height: inherit;
-			}
-		}
 	}
 
 	&--slicked{
-		@include ratio_block('.carrousel__list', 66%);
-		// visibility: visible !important;
+		display: block !important;
+
+		.carrousel__list{
+			margin-bottom: 2em;
+		}
+
+		.carrousel__item{
+			// margin-right: 2em;
+			margin-bottom: 0;
+		}
+
+		.carrousel__info{
+			display: none;
+		}
 	}
 
 }

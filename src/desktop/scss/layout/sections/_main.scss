@@ -1,12 +1,6 @@
-$column-2: (columns: 2, gutters: .1);
-$column-3: (columns: 3, gutters: .1);
-$column-4: (columns: 4, gutters: .1);
-$column-5: (columns: 5, gutters: .1);
-$column-6: (columns: 6, gutters: .1);
-$column-7: (columns: 7, gutters: .1);
-$column-8: (columns: 8, gutters: .1);
-$column-9: (columns: 9, gutters: .1);
-$column-10: (columns: 10, gutters: .1);
+$main__section-column-2: (columns: 2, gutters: .1);
+$main__section-column-3: (columns: 3, gutters: .1);
+$main__section-column-4: (columns: 4, gutters: .1);
 
 .main{
 	min-height: 100px;
@@ -24,17 +18,11 @@ $column-10: (columns: 10, gutters: .1);
 }
 
 .main__section{
-	&--column-2{@include layout($column-2);}
-	&--column-3{@include layout($column-3);}
-	&--column-4{@include layout($column-4);}
-	&--column-5{@include layout($column-5);}
-	&--column-6{@include layout($column-6);}
-	&--column-7{@include layout($column-7);}
-	&--column-8{@include layout($column-8);}
-	&--column-9{@include layout($column-9);}
-	&--column-10{@include layout($column-10);}
+	&--column-2{@include layout($main__section-column-2);}
+	&--column-3{@include layout($main__section-column-3);}
+	&--column-4{@include layout($main__section-column-4);}
 
-	@for $i from 1 through 10{
+	@for $i from 1 through 4{
 		&--column-#{$i}{
 			.main__block{
 				 @include gallery(1 of $i);
@@ -45,4 +33,54 @@ $column-10: (columns: 10, gutters: .1);
 
 .main__block{
 	position: relative;
+}
+
+.main{
+}
+
+
+@include respond-to(small) {
+	$main__section-tablet: (
+		columns: 2,
+		output: float
+	);
+
+	.main__section{
+		&--column-2,
+		&--column-3,
+		&--column-4{
+			@include layout($main__section-tablet);
+
+			.main__block{
+				&:nth-child(even){				
+				 	@include gallery(1 at 1);
+				}
+				&:nth-child(odd){				
+				 	@include gallery(1 at 2);
+				}
+				margin-bottom: gutter();
+			}
+		}
+	}
+}
+
+@include respond-to(mobile) {
+
+
+	.main__section{
+		&--column-2,
+		&--column-3,
+		&--column-4{
+
+			.main__block{			
+				display: block;
+				float: none;
+				margin-left: 0 !important;
+				margin-right: 0 !important;
+				width: 100%;
+
+				margin-bottom: gutter();
+			}
+		}
+	}
 }
