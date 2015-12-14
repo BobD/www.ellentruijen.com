@@ -8,9 +8,13 @@
 
     <body class=''>
 
-    	<div class="wrapper">
+    	{{> template-parts/mobile-menu active='etloves' pages=content.pages.etloves page='art_fart'}}
 
-	        {{> sections/header active='etloves' pages=content.pages.etloves}}
+    	{{> template-parts/header-mobile}}
+
+    	<div id='content' class="wrapper">
+
+	        {{> template-parts/header active='etloves' pages=content.pages.etloves}}
 
 	        <main class="main">
 
@@ -32,7 +36,7 @@
 
 			</main>
 
-	        {{> sections/footer}}
+	        {{> template-parts/footer}}
 
         </div>
 

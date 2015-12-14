@@ -2,6 +2,23 @@ $main__section-column-2: (columns: 2, gutters: .1);
 $main__section-column-3: (columns: 3, gutters: .1);
 $main__section-column-4: (columns: 4, gutters: .1);
 
+$main__section--information: (
+	columns: 7, 
+	gutters: .1,
+);
+
+@mixin block-offset-top($offset: 40%){
+	&:before {
+    	display: block;
+    	content: "";
+    	width: 100%;
+    	padding-top: #{$offset};
+  	}
+}
+
+
+
+
 .main{
 	min-height: 100px;
 }
@@ -35,9 +52,71 @@ $main__section-column-4: (columns: 4, gutters: .1);
 	position: relative;
 }
 
-.main{
+.main__section{
+
+	&--jumbo{
+	}
+
+	&--small{
+		.main__block{
+			width: 75%;
+			margin: 0 auto;
+		}
+	}
+
+	&--offset{
+		.main__block{
+			&:nth-child(even){
+				@include block-offset-top('40%');
+			}
+		}
+	}
+
+	&--information{
+		 display: flex;
+		.main__block{
+			display: flex;
+
+			&--first{
+				 @include span(4 at 1);
+			}
+
+			&--last{
+				 @include span(3 at 5);
+
+				 .visual{
+				 	@extend %background-image;
+				 	min-height: 200px;
+				 	position: absolute;
+				    top: 0;
+				    right: 0;
+				    bottom: 0;
+				    left: 0;
+				 }
+			}
+	
+			// Overriding Suzy's layout so the flexbox approach for equal height sticks.. not the best move, will check how it behaves
+			&--first,
+			&--last{
+				margin-left: 0;
+				margin-right: 0;
+				padding-right: 4em;
+			}
+
+		}
+	}
 }
 
+@include respond-to(mobile) {
+	.main__section{
+		&--small{
+			.main__block{
+				width: auto;
+				margin: auto;
+			}
+		}
+	}
+}
 
 @include respond-to(small) {
 	$main__section-tablet: (

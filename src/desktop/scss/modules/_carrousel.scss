@@ -2,14 +2,9 @@ $carrousel__footer: (
   	columns: 3
 );
 
-// $carrousel__item__grid_3 (
-//   	columns: 3,
-//   	gutters: 0
-// );
-
-
 .carrousel{	
 	position: relative;
+	overflow: hidden;
 
 	.slick-list,
 	.slick-track{
@@ -25,6 +20,7 @@ $carrousel__footer: (
     	outline: none;
     	background: transparent;
     	color: transparent;
+    	width: 2em;
 
     	&:before{
     		font-family: FontAwesome;
@@ -59,24 +55,6 @@ $carrousel__footer: (
 	display: inline-block;
 	width: 100%;
 	margin-bottom: $row-v-margin;
-
-
-	// &--grid-2{
-	// 	@include layout($carrousel__item__grid_2);
-
-	// 	.carrousel__block{
-
-	// 		&--0{
-	// 			@include span(1 at 1);
-	// 		}
-
-	// 		&--1{
-	// 			@include span(1 at 2);
-	// 		}
-	// 	}
-
-	// }
-
 }
 
 .carrousel__block{
@@ -150,4 +128,21 @@ $carrousel__footer: (
 		}
 	}
 
+}
+
+@include respond-to(mobile) {
+	.carrousel__description,
+	.carrousel__item-description{
+		@include span(3 at 1);
+		
+		text-align: left;
+	}
+
+	.slick-prev{
+		left: 0 !important;
+	}
+
+	.slick-next{
+		right: 0 !important;
+	}
 }

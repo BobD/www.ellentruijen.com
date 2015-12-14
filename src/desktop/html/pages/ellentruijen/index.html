@@ -8,16 +8,20 @@
 
     <body class=''>
 
-    	<div class="wrapper">
+    	{{> template-parts/mobile-menu active='ellentruijen' pages=content.pages.ellentruijen}}
 
-	        {{> sections/header active='ellentruijen' pages=content.pages.ellentruijen}}
+        {{> template-parts/header-mobile}}
+
+    	<div id='content' class="wrapper">
+
+	        {{> template-parts/header active='ellentruijen' pages=content.pages.ellentruijen}}
 
 	        <main class="main">
 
 
 			</main>
 
-	        {{> sections/footer}}
+	        {{> template-parts/footer}}
 
         </div>
 

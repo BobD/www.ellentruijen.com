@@ -8,14 +8,14 @@ $transition-duration:				0.2s;
 
 // Layout
 $row-v-margin:						4em;
+$mobile-padding:					16px;
+$mobile-offset-top:					5em;
+$tablet-padding:					32px;
 
 // Typo
-
-// https://github.com/ianrose/typesettings
-$base-vertical-unit: 				5px;
-$base-line-multi: 					4;
-$base-font-size: 					11px;
-$ms-ratio: 							1.2;
+$base-font-size: 					16px;
+$link-font-size: 					13px;
+$line-height: 						1.6;
 
 
 // Responsive
@@ -28,7 +28,7 @@ $ms-ratio: 							1.2;
 
 $screen:       "only screen and";
 $breakpoints: (
-  'mobile'  		: '#{$screen} ( max-width: 320px )',
-  'small'  			: '#{$screen} ( min-width: 321px )  and ( max-width: 69.999em )',
-  'medium' 			: '#{$screen} ( min-width: 70em )'
+  'mobile'  		: '#{$screen} ( max-width: 480px )',
+  'small'  			: '#{$screen} ( min-width: 480.1px )  and ( max-width: 1024px )',
+  'medium' 			: '#{$screen} ( min-width: 1024px )'
 );

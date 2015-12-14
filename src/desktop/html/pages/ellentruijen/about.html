@@ -8,9 +8,13 @@
 
     <body class=''>
 
-    	<div class="wrapper">
+    	{{> template-parts/mobile-menu active='ellentruijen' pages=content.pages.ellentruijen page='about'}}
 
-	        {{> sections/header active='ellentruijen' pages=content.pages.ellentruijen page='about'}}
+    	{{> template-parts/header-mobile}}
+
+    	<div id='content' class="wrapper">
+
+	        {{> template-parts/header active='ellentruijen' pages=content.pages.ellentruijen page='about'}}
 
 	        <main class="main">
 
@@ -62,7 +66,7 @@
 		
 			</main>
 
-	        {{> sections/footer}}
+	        {{> template-parts/footer}}
 
         </div>
 

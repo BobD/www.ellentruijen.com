@@ -1,0 +1,14 @@
+.logo,
+.navigation{
+	line-height: 30px;
+}
+
+.logo{
+	font-size: 2.5em;
+}
+
+.logo__link{
+	@include logo();
+	color: inherit;
+	text-decoration: none;
+}

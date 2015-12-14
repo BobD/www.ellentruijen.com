@@ -1,0 +1,7 @@
+<ul class="navigation">
+  	{{#each content.navigation}}
+		<li class="navigation__item {{#menu_active ../active id}}{{/menu_active}}">
+			<a class="navigation__link" href='{{url}}'>{{title}}</a>
+		</li>
+  	{{/each}}
+  </ul>

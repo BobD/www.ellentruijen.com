@@ -1,106 +1,123 @@
 @mixin font-regular(){
-  font-weight: normal;
+    font-weight: normal;
 }
 
 @mixin font-bold(){
-  font-weight: 700;
+    font-weight: 700;
 }
 
 // https://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/
 @mixin sticky_footer($wrapper, $content){
-  #{$wrapper}{
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-  }
+    #{$wrapper}{
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+    }
 
-  #{$content}{
-    flex: 1;
-  }
+    #{$content}{
+        flex: 1;
+    }
 }
 
 @mixin nav_link(){
-  text-decoration: none;
-  text-transform: uppercase;
-  color: inherit;
-  display: inline-block;
-  position: relative;
-
+    text-decoration: none;
+    text-transform: uppercase;
+    color: inherit;
+    display: inline-block;
+    position: relative;
+    line-height: $line-height;
+    font-size: $link-font-size;
   
-  &:before{
-    content: '';
-    display: block;
-    position: absolute;
-    bottom: 2px;
-    left: 0;
-    width: 0;
-    height: 1px;
-    background: $theme-grey;
-    transition: width $transition-duration;
-  }
-
-  .active &,
-  &:hover{
     &:before{
-      width: 100%;
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 2px;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background: $theme-grey;
+        transition: width $transition-duration;
     }
-  }
 
-  .active &:hover{
-    &:before{
-      width: 100% !important;
+    .active &,
+    &:hover{
+        &:before{
+        width: 100%;
+        }
     }
-  }
+
+    .active &:hover{
+        &:before{
+            width: 100% !important;
+        }
+    }
+
+    @include respond-to(mobile) {
+        font-size: inherit;
+    }
 }
 
 @mixin ratio_block($content, $ratio: 100%){
     // http://www.mademyday.de/css-height-equals-width-with-pure-css.html
-  &:before {
-      display: block;
-      content: "";
-      width: 100%;
-      padding-top: $ratio;
-  }
+    &:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: $ratio;
+    }
 
-  #{$content}{
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-  }
+    #{$content}{
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
 }
+
+@mixin logo(){  
+    background-image: url('../images/static/logo.svg');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+    display: block;
+    text-indent: -1000em;
+    width: 200px;
+    height: 30px;
+}
+
 
 // ----
 // http://www.sitepoint.com/managing-responsive-breakpoints-sass/
 // http://sassmeister.com/gist/0614ac3971ae82925ef4
 // ----
 @mixin respond-to($name, $push: false) {
-  // If the key exists in the map
-  @if map-has-key($breakpoints, $name) {
-    // Prints a media query based on the value
-    @media #{map-get($breakpoints, $name)} {
-      @content;
+    // If the key exists in the map
+     @if map-has-key($breakpoints, $name) {
+        // Prints a media query based on the value
+        @media #{map-get($breakpoints, $name)} {
+        @content;
+        }
     }
-  }
 
-  // If the key doesn't exist in the map
-  // But $push is defined
-  @else if $push != false {
-    // Add the new breakpoint to the map
-    $breakpoints: map-merge($breakpoints, ($name: $push)) !global;
-    // And re-call the mixin normally
-    @include respond-to($name) {
-      @content;
+    // If the key doesn't exist in the map
+    // But $push is defined
+    @else if $push != false {
+        // Add the new breakpoint to the map
+        $breakpoints: map-merge($breakpoints, ($name: $push)) !global;
+        // And re-call the mixin normally
+        @include respond-to($name) {
+        @content;
+        }
     }
-  }
 
-  // If the key doesn't exist in the map
-  // And there is no push
-  @else {
-    // Just warn the user
-    @warn "Unfortunately, no value could be retrieved from `#{$name}`. "
-        + "Please make sure it is defined in `$breakpoints` map. "
-        + "Or pass the media query as a second parameter to add it to the map.";
-  }
+    // If the key doesn't exist in the map
+    // And there is no push
+    @else {
+        // Just warn the user
+        @warn "Unfortunately, no value could be retrieved from `#{$name}`. "
+            + "Please make sure it is defined in `$breakpoints` map. "
+            + "Or pass the media query as a second parameter to add it to the map.";
+    }
 }

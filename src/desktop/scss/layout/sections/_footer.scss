@@ -16,6 +16,8 @@ $footer__contact: (
 .footer{
 	@extend %divider-top;
 	padding-top: 2em;
+	font-size: $link-font-size;
+	line-height: $line-height;
 
 	a{
 		@include nav_link();
@@ -121,6 +123,52 @@ $footer__contact: (
 .footer__title{
 	 @include span(1 last); 
 	 text-align: right;
+}
+
+@include respond-to(mobile) {
+	.footer{
+		font-size: inherit;
+	}
+
+	.footer__header{
+		@include font_bold();
+	}
+
+	.footer__section{
+		&--c1{@include span(7 at 2);}
+		&--c2{@include span(7 at 3);}
+		&--c3{@include span(7 at 4);}
+		&--c4{@include span(7 at 1);}
+		&--c5{@include span(7 at 5);}
+
+		margin-bottom: 1em;
+	}
+
+	.footer__address{
+
+		&--one,
+		&--two{
+			@include span(7 at 1); 
+			margin-bottom: 1em;
+		}
+
+	}
+
+	.footer__newsletter,
+	.footer__social,
+	.footer__copy{
+		@include span(7 at 1);
+		margin-bottom: 1em;
+	}
+
+	.footer__newsletter,
+	.footer__social{
+		top: 0;
+	}
+
+	.footer__social-link{
+		font-size: 2em !important;
+	}
 }
 
 

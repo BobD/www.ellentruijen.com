@@ -1,0 +1,49 @@
+.header-mobile{
+	@extend %divider-bottom;
+
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 2;
+	background: inherit;
+	padding: 1em $mobile-padding;
+
+	.icon{
+		width: 1em;
+		text-align: right;
+	}
+}
+
+.header-mobile__toggle,
+.header-mobile__logo{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.header-mobile__logo{
+}
+
+.header-mobile__toggle{
+	float: right;
+	font-size: 1.8em;
+}
+
+.header-mobile__navigation,
+.header-mobile__pages{
+	display: none;
+}
+
+#mobile-close{
+	display: none;
+}
+
+
+@include respond-to(mobile) {
+
+	.header-mobile{
+		display: block;
+	}
+
+}

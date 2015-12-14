@@ -8,16 +8,19 @@
 
     <body class=''>
 
-    	<div class="wrapper">
+    	{{> template-parts/mobile-menu active='shop'}}
 
-	        {{> sections/header active='shop'}}
+        {{> template-parts/header-mobile}}
+
+    	<div id='content' class="wrapper">
+
+	        {{> template-parts/header active='shop'}}
 
 	        <main class="main">
 
-
 			</main>
 
-	        {{> sections/footer}}
+	        {{> template-parts/footer}}
 
         </div>
 
