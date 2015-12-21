@@ -21,3 +21,19 @@ $divider: thin solid $theme-grey;
 	background-repeat: no-repeat;
 	background-position: center center;
 }
+
+%text-body-styles{
+	h1,
+	h2,
+	h3{
+		margin-bottom: .5em;
+	}
+
+	p{
+		margin-bottom: 1em;
+	}
+
+	a{
+		@include nav-link();
+	}
+}

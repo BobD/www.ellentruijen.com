@@ -1,0 +1,109 @@
+
+$page: (
+  	columns: 7
+);
+
+$page__header: (
+  	columns: 7
+);
+
+.page{
+	margin: 0 auto $row-v-margin auto;
+
+	@include layout($page);
+	@extend %clearfix;
+}
+
+.page__content{
+	@include span(5 at 1);
+}
+
+.page__header{
+	@include layout($page);
+	@extend %clearfix;
+}
+
+.page__header-left{
+	@include span(4 at 1);
+}
+
+.page__header-right{
+	@include span(3 at 5);
+	text-align: right;
+}
+
+.page__title{
+
+}
+
+.page__sub-title{
+}
+
+.page__body{
+	@extend %text-body-styles;
+}
+
+.page__aside{
+	@include span(2 at 6);
+	position: relative;
+}
+
+// Vertical rhytm 
+// http://typesettings.io/
+.page__header,
+.page__aside .aside__header{
+	margin-bottom: emRhythm(2);
+}
+
+.page__header-left,
+.page__header-right,
+.page__aside .aside__header{
+	&:after{
+		content: '';
+		width: 0;
+		height: emRhythm(8);
+		display: inline-block;
+	}
+}
+
+.page__title,
+.page__sub-title,
+.page__aside .aside__title{
+	display: inline-block;
+	vertical-align: baseline;
+}
+
+.page__aside .aside__title{
+	position: relative;
+	right: -.2em;
+}
+// END
+
+
+@include respond-to(mobile) {
+	.page__header-left,
+	.page__header-right,
+	.page__aside .aside__header{
+		&:after{
+			display: none;
+		}
+	}
+
+	.page__content,
+	.page__aside{
+		@include span(6 at 1);
+	}
+
+	.page__aside{
+		text-align: left !important;
+	}
+
+	.page__header-left,
+	.page__header-right{
+		@include span(6 at 1);
+	}
+
+	.page__header-right{
+		text-align: left !important;
+	}
+}

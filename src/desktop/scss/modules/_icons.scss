@@ -1,0 +1,26 @@
+.icon{
+	display: inline-block;
+	vertical-align: middle;
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: contain;
+	width: 1em;
+	height: 1em;
+
+
+	&-next{
+		background-image: url('../images/static/arrow_next.svg');
+    	&-w{
+    		background-image: url('../images/static/arrow_next_w.svg');
+    	}
+	}
+
+	&-prev{
+		background-image: url('../images/static/arrow_next.svg');
+    	&-w{
+    		background-image: url('../images/static/arrow_prev_w.svg');
+    	}
+	}
+
+
+}

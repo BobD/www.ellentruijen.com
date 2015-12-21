@@ -14,36 +14,27 @@ $carrousel__footer: (
 	.slick-arrow{
 		position: absolute;
 		top: 50%;
-		margin-top: -1em;
+		margin-top: -.6em;
 		z-index: 1;
 		border: none;
     	outline: none;
     	background: transparent;
     	color: transparent;
-    	width: 2em;
-
-    	&:before{
-    		font-family: FontAwesome;
-    		font-size: 2em;
-    		color: white;
-    	}
+		background-repeat: no-repeat;
+    	background-position: left center;
+    	background-size: contain;
+    	width: 1.2em;
+    	height: 1.2em;
+    	color: transparent;
 
 		&.slick-next{
 			right: 1em;
-
-			&:before{
-				// http://fortawesome.github.io/Font-Awesome/icon/chevron-right/
-				content: "\f054";
-			}
+    		background-image: url('../images/static/arrow_next_w.svg');
 		}
 
 		&.slick-prev{
 			left: 1em;
-
-			&:before{
-				// http://fortawesome.github.io/Font-Awesome/icon/chevron-left/
-				content: "\f053";
-			}
+    		background-image: url('../images/static/arrow_prev_w.svg');
 		}
 	}
 }
@@ -138,11 +129,22 @@ $carrousel__footer: (
 		text-align: left;
 	}
 
-	.slick-prev{
-		left: 0 !important;
+	.carrousel{	
+
+		.slick-arrow{
+			width: 1em;
+			height: 1em;
+
+			&.slick-prev{
+				left: .5em;
+			}
+
+			&.slick-next{
+				right: .5em;
+			}
+		}
+
+
 	}
 
-	.slick-next{
-		right: 0 !important;
-	}
 }

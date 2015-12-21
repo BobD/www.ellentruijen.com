@@ -14,21 +14,25 @@
 
     	<div id='content' class="wrapper">
 
-	        {{> template-parts/header}}
+    		<div class="wrapper__content">
 
-	        <main class="main">
+		        {{> template-parts/header}}
 
-	        	{{> template-parts/main_section-article_1 mode="jumbo"}}
+		        <main class="main">
 
-				{{> template-parts/main_section-article_2 mode="offset"}}
+		        	{{> template-parts/main_section-article_1 mode="jumbo"}}
 
-				{{> template-parts/main_section-article_1 mode="small"}}
+					{{> template-parts/main_section-article_2 mode="offset"}}
 
-				{{> template-parts/main_section-article_2 mode="offset"}}
+					{{> template-parts/main_section-article_1 mode="small"}}
 
-				{{> template-parts/main_section-grid_4 mode="grid"}}
-		
-			</main>
+					{{> template-parts/main_section-article_2 mode="offset"}}
+
+					{{> template-parts/main_section-grid_4 mode="grid"}}
+			
+				</main>
+
+			</div>
 
 	        {{> template-parts/footer}}
 

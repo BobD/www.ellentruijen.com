@@ -7,11 +7,11 @@ body{
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	color: $text-color;
-	font-size: $base-font-size;
+	// font-size: $base-font-size;
 }
 
 @include respond-to(mobile) {
-  body{
-	font-size: $base-font-size * 1.1;
-  }
+ //  body{
+	// font-size: $base-font-size * 1.1;
+ //  }
 }

@@ -1,13 +1,12 @@
 // http://susy.oddbird.net/
 $susy: (
-  container: 1200px,
+  container: $container-width-large,
   global-box-sizing: border-box
 );
 
-
 .wrapper{
 	@include container;
-	padding: 0 0 1em 0;
+	padding: 0 $desktop-padding $desktop-padding $desktop-padding;
 }
 
 @include respond-to(mobile) {
@@ -18,8 +17,26 @@ $susy: (
 	}
 }
 
-@include respond-to(small) {
+@include respond-to(medium) {
 	.wrapper{
-		padding: 0 $tablet-padding;
+		padding: 0 $tablet-padding $tablet-padding $tablet-padding;
 	}
 }
+
+@include respond-to(small) {
+	.wrapper{
+		padding: 0 $tablet-padding $tablet-padding $tablet-padding;
+	}
+}
+
+// Sticky footer: https://github.com/philipwalton/solved-by-flexbox/blob/master/assets/css/components/site.css
+.wrapper{
+	display: flex;
+	height: 100%;
+    flex-direction: column;
+}
+
+.wrapper__content{
+	flex:  1 0 auto;
+}
+// END

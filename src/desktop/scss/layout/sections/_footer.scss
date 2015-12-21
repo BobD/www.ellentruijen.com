@@ -91,29 +91,36 @@ $footer__contact: (
 .footer__copy{
 	 @include span(3 at 1);
 	 text-transform: uppercase;
+
+	 > *{
+	 	display: inline-block;
+	 	vertical-align: middle;
+	 }
 }
 
 .footer__newsletter{
 	@include span(2 at 4);
 	position: relative;
-	top: -2.8em;
+	height: emRhythm(6);
+	top: - emRhythm(6);
 }
 
 .footer__social{
 	@include span(1 at 7);
 	position: relative;
  	color: $theme-grey;
- 	top: -3.8em;
+ 	height: emRhythm(6);
+ 	top: - emRhythm(6);
 }
 
 .footer__social-item{
 	display: inline-block;
-	margin-right: .5em;
+	text-align: center;
 }
 
 .footer__social-link{
 	color: inherit;
-	font-size: 1.6em;
+	font-size: 1.5em !important;
 
 	&:hover{
 		color: $theme-grey-dark;

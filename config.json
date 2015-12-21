@@ -1,7 +1,6 @@
 {
 	"distribute": {
-		"local": "/Applications/AMPPS/www/ellentruijen/",
-		"ftp": {}
+		"local": "/Applications/AMPPS/www/et_dev/wp-content/themes/et_twentysixteen/"
 	}
 
 }

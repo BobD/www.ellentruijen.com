@@ -1,0 +1,72 @@
+
+ <!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+    {{> head}}
+
+    <body class=''>
+
+		{{> template-parts/mobile-menu}}
+
+		{{> template-parts/header-mobile}}
+
+    	<div id='content' class="wrapper">
+
+	        {{> template-parts/header}}
+
+	        <main class="main">
+
+	        	<div class="page search">
+
+	        		<div class="page__aside aside">
+                        
+                        <header class="aside__header">
+                            <h3 class="aside__title"></h3>
+                        </header>
+
+                        <div class="aside__body">
+                            {{> template-parts/search-form}}
+                        </div>
+		        	</div>
+
+
+	        		<div class="page__content">
+
+						<header class="page__header">
+							<h1 class="page__title">
+								Search results for: lorem
+							</h1>
+						</header>
+
+						<section class="main__section">
+			        		{{> template-parts/article-excerpt image='images/summer_01.jpg'}}
+			        	</section>
+
+						<hr class="divider">
+
+						<section class="main__section">
+			        		{{> template-parts/article-excerpt image='images/summer_02.jpg'}}
+			        	</section>
+
+			        	<hr class="divider">
+						
+						<section class="main__section">
+			        		{{> template-parts/article-excerpt image='images/summer_03.jpg'}}
+			        	</section>
+
+		        	</div>
+
+	        	</div>
+		
+			</main>
+
+	        {{> template-parts/footer}}
+
+        </div>
+
+    </body>
+
+</html>

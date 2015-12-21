@@ -1,0 +1,14 @@
+.aside{
+	text-align: right;
+}
+
+.aside__header{
+	position: relative;
+}
+
+.aside__header-body{
+}
+
+.aside__body{
+	@extend %text-body-styles;
+}

@@ -1,0 +1,20 @@
+.search-form{
+
+}
+
+.search-form__label{
+
+}
+
+.search-form__field{
+	padding: .2em .5em;
+
+	&:focus{
+		outline: 0;
+	}
+}
+
+.search-form__submit{
+	border: 0;
+	background: transparent;
+}

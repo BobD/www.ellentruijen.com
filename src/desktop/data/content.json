@@ -15,7 +15,7 @@
 			{"id": "et_care", "title": "ET Care", "url": ""},
 			{"id": "press", "title": "Press", "url": ""},
 			{"id": "stores", "title": "Stores", "url": ""},
-			{"id": "contact", "title": "Contact", "url": ""}
+			{"id": "contact", "title": "Contact", "url": "pages/ellentruijen/contact.html"}
 		],
 		"etloves": [
 			{"id": "fashion_story", "title": "Fashion Story", "url": ""},

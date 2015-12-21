@@ -1,16 +1,18 @@
 // Base
 $background-color:					white;
-$text-color:						black;
-$link-color:						black;
+$text-color:						#010101;
+$link-color:						#010101;
 $theme-grey:						#a1a1a1;
 $theme-grey-dark:					#616161;
 $transition-duration:				0.2s;
 
 // Layout
-$row-v-margin:						4em;
+$container-width-large:				1200px;
+$row-v-margin:						emRhythm(10);
 $mobile-padding:					16px;
 $mobile-offset-top:					5em;
-$tablet-padding:					32px;
+$tablet-padding:					16px; // small/medium
+$desktop-padding:					16px; // large
 
 // Typo
 $base-font-size: 					16px;
@@ -29,6 +31,7 @@ $line-height: 						1.6;
 $screen:       "only screen and";
 $breakpoints: (
   'mobile'  		: '#{$screen} ( max-width: 480px )',
-  'small'  			: '#{$screen} ( min-width: 480.1px )  and ( max-width: 1024px )',
-  'medium' 			: '#{$screen} ( min-width: 1024px )'
+  'small'  			: '#{$screen} ( min-width: 480.1px )  and ( max-width: 768px )',
+  'medium'  		: '#{$screen} ( min-width: 768.1px )  and ( max-width: #{$container-width-large} )',
+  'large' 			: '#{$screen} ( min-width: #{$container-width-large}  )',
 );

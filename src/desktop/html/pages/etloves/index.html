@@ -14,27 +14,31 @@
 
     	<div id='content' class="wrapper">
 
-	        {{> template-parts/header active='etloves' pages=content.pages.etloves}}
+    		<div class="wrapper__content">
 
-	        <main class="main">
+		        {{> template-parts/header active='etloves' pages=content.pages.etloves}}
 
-				<section class="main__section">
-					{{> template-parts/article-excerpt image='images/summer_01.jpg'}}
-				</section>
+		        <main class="main">
 
-				<hr class="divider">
+					<section class="main__section">
+						{{> template-parts/article-excerpt image='images/summer_01.jpg'}}
+					</section>
 
-				<section class="main__section">
-					{{> template-parts/article-excerpt image='images/summer_02.jpg'}}
-				</section>
+					<hr class="divider">
 
-				<hr class="divider">
+					<section class="main__section">
+						{{> template-parts/article-excerpt image='images/summer_02.jpg'}}
+					</section>
 
-				<section class="main__section">
-					{{> template-parts/article-excerpt image='images/summer_03.jpg'}}
-				</section>
+					<hr class="divider">
 
-			</main>
+					<section class="main__section">
+						{{> template-parts/article-excerpt image='images/summer_03.jpg'}}
+					</section>
+
+				</main>
+
+			</div>
 
 	        {{> template-parts/footer}}
 

@@ -51,8 +51,8 @@ module.exports = function(grunt) {
         },
         dist: {
             files: [
-            {expand: true, cwd: 'build/desktop', src: ['**/*.*'], dest: 'dist/desktop', filter: 'isFile'},
-            {expand: true, cwd: 'build/mobile', src: ['**/*.*'], dest: 'dist/mobile', filter: 'isFile'}
+                {expand: true, cwd: 'build/desktop', src: ['**/*.*'], dest: 'dist/desktop', filter: 'isFile'},
+                {expand: true, cwd: 'build/mobile', src: ['**/*.*'], dest: 'dist/mobile', filter: 'isFile'}
             ]
         }
     },
@@ -128,6 +128,7 @@ module.exports = function(grunt) {
         }
     },
 
+    // https://www.npmjs.com/package/grunt-ftp-push
     ftp_push: {
         desktop: {
             options: {

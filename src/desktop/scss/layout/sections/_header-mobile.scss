@@ -23,6 +23,8 @@
 }
 
 .header-mobile__logo{
+	position: relative;
+	top: 4px;
 }
 
 .header-mobile__toggle{
@@ -41,9 +43,7 @@
 
 
 @include respond-to(mobile) {
-
 	.header-mobile{
 		display: block;
 	}
-
 }

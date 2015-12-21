@@ -6,6 +6,14 @@ html {
 }
 
 
+// Needed for sticky footer: https://github.com/philipwalton/solved-by-flexbox/blob/master/assets/css/components/site.css
+// Also see the _wrapper.scss
+html,
+body{
+	height: 100%;
+}
+
+
 html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, dl,
 dt, dd, blockquote, address{
 	margin: 0;
