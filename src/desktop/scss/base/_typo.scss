@@ -2,16 +2,12 @@ html{
 }
 
 body{
-	font-family: 'Abel', sans-serif;
+	font-family: 'dinregular', sans-serif;
 	letter-spacing: 0.5px;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	color: $text-color;
-	// font-size: $base-font-size;
 }
 
 @include respond-to(mobile) {
- //  body{
-	// font-size: $base-font-size * 1.1;
- //  }
 }

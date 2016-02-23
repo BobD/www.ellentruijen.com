@@ -1,13 +1,16 @@
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "helpers/placeholders";
+
 // https://github.com/ianrose/typesettings
 $load-typesetted: false;
 @import "bower_components/typesettings/typesettings";
+$row-v-margin:	emRhythm(7);
+
 // http://kenwheeler.github.io/slick/
 @import "bower_components/slick-carousel/slick/slick.scss";
 // http://susy.oddbird.net/
 @import "bower_components/susy/sass/susy";
-@import "helpers/variables";
-@import "helpers/mixins";
-@import "helpers/placeholders";
 @import "base";
 @import "layout";
 @import "modules";

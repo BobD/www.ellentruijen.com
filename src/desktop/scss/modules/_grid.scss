@@ -1,14 +1,19 @@
 .grid{
-
+	&--articles{
+		.grid__item{
+			@include ratio_block('.grid__content', 66%);
+		}
+	}
 }
 
 .grid__item{
 	@include ratio_block('.grid__content');
+	margin-bottom: gutter(2.25);
 }
 
 .grid__content{
 	@extend %background-image;
-	padding: 1em;
+	padding: ($desktop-padding / 2) $desktop-padding;
 
 	&:hover{
 		.grid__header{
@@ -19,4 +24,36 @@
 
 .grid__header{
 	display: none;
+}
+
+.grid__footer{
+	position: absolute;
+	top: 100%;
+	color: $text-content-color;
+	font-size: 95%;
+	margin-top: .8em;
+
+	.grid__link,
+	.grid__info{
+		display: inline-block;
+	 	vertical-align: middle;
+	 	line-height: 1.5;
+	}
+}
+
+.grid__info{
+
+}
+
+.grid__link{
+	@include nav-link();
+
+	 > *{
+	 	display: inline-block;
+	 	vertical-align: middle;
+	 }
+	 
+	 .icon{
+	 	margin-left: .2em;
+	 }
 }

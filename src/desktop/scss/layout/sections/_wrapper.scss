@@ -6,15 +6,6 @@ $susy: (
 
 .wrapper{
 	@include container;
-	padding: 0 $desktop-padding $desktop-padding $desktop-padding;
-}
-
-@include respond-to(mobile) {
-	.wrapper{
-		padding: $mobile-padding;
-		background: inherit;
-		margin-top: $mobile-offset-top;
-	}
 }
 
 @include respond-to(medium) {
@@ -26,6 +17,14 @@ $susy: (
 @include respond-to(small) {
 	.wrapper{
 		padding: 0 $tablet-padding $tablet-padding $tablet-padding;
+	}
+}
+
+@include respond-to(mobile) {
+	.wrapper{
+		padding: $mobile-padding;
+		background: inherit;
+		margin-top: $mobile-offset-top;
 	}
 }
 

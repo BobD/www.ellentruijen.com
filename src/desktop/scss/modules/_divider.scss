@@ -1,5 +1,13 @@
 .divider{
 	border: 0;
-	border-top: thin solid $theme-grey;
+	border-top: $divider-line;
 	margin: ($row-v-margin / 2)  0;
+
+	&--hidden{
+		border-top-color: transparent;
+	}
+
+	&--condensed{
+		margin: 0;
+	}
 }

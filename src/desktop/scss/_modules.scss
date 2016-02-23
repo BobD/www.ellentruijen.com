@@ -1,8 +1,10 @@
 @import "modules/navigation";
+@import "modules/pagination";
 @import "modules/article";
 @import "modules/article-excerpt";
 @import "modules/article-full";
 @import "modules/page";
+@import "modules/page-posts";
 @import "modules/post";
 @import "modules/aside";
 @import "modules/grid";
@@ -14,3 +16,5 @@
 @import "modules/list";
 @import "modules/search";
 @import "modules/search-form";
+@import "modules/iframe";
+@import "modules/contact";

@@ -4,7 +4,7 @@
 
 .navigation__item{
 	display: inline-block;
-	margin-right: 1.5em;
+	margin-right: 1.2em;
 
 	&--active{
 		
@@ -13,6 +13,7 @@
 
 .navigation__link{
 	@include nav_link();
+	font-size: $nav-font-size;
 	position: relative;
 	top: .2em;
 }

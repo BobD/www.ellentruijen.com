@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+    {{> head}}
+
+    <body class=''>
+
+    	{{> template-parts/mobile-menu active='ellentruijen' pages=content.pages.ellentruijen page='sideprojects'}}
+
+    	{{> template-parts/header-mobile}}
+
+    	<div id='content' class="wrapper">
+
+    		<div class="wrapper__content">
+
+	        	{{> template-parts/header active='ellentruijen' pages=content.pages.ellentruijen page='sideprojects'}}
+
+		        <main class="main">
+
+		        	{{> template-parts/main_section-grid_2 mode="grid"}}
+			
+				</main>
+
+			</div>
+
+	        {{> template-parts/footer}}
+
+        </div>
+
+    </body>
+
+</html>

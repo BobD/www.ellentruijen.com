@@ -1,12 +1,6 @@
-$article--excerpt-header: (
-	columns: 5
-);
-
-
 .article{
 	
 	&--excerpt{
-		margin: 0 auto;
 		text-align: left;
 
 		.article__header{
@@ -16,15 +10,21 @@ $article--excerpt-header: (
 
 		.article__title{
 			@include span(3 at 1);
-			@include font-bold();
 			font-size: inherit;
 		}
 
 		.article__date{
 			@include span(2 at 4);
-			@include font-bold();
 			text-align: right;
 			font-size: inherit;
+		}
+
+		&-small{
+			width: 88%;
+		}
+
+		&-tiny{
+			width: 65%;
 		}
 	}
 
@@ -35,6 +35,7 @@ $article--excerpt-header: (
 		text-align: left;
 
 		&--excerpt{
+			width: 100%;
 			.article__title{
 				@include span(4 at 1);
 			}

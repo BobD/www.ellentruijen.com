@@ -18,22 +18,34 @@
 
 		        {{> template-parts/header active='etloves' pages=content.pages.etloves}}
 
-		        <main class="main">
+		        <main class="main main--small">
 
-					<section class="main__section">
+		        	<article class="page main__section ">
+
+			            <section class="page__content page__content--divided">
+
+			                <div class="page__body">
+
+			        			<p style="text-align: center;">ET Loves is my personal blog, where I would like to share my love for fashion, interior &amp; styling, art, food, travelling&nbsp;and everything that inspires me!<br>
+			Get ready to get gobbled into my world.</p>
+			                </div>
+
+			            </section>
+
+			        </article>
+					
+					<section class="page-post main__section">
+
 						{{> template-parts/article-excerpt image='images/summer_01.jpg'}}
-					</section>
 
-					<hr class="divider">
+						<hr class="divider">
 
-					<section class="main__section">
 						{{> template-parts/article-excerpt image='images/summer_02.jpg'}}
-					</section>
 
-					<hr class="divider">
+						<hr class="divider">
 
-					<section class="main__section">
 						{{> template-parts/article-excerpt image='images/summer_03.jpg'}}
+
 					</section>
 
 				</main>

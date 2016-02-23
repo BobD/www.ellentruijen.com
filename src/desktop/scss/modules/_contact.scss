@@ -1,0 +1,69 @@
+$contact: (
+  	columns: 5,
+  	output: float
+);
+
+.contact{
+	@include layout($contact);
+	@extend %clearfix;
+
+	text-transform: uppercase;
+	line-height: 1.7;
+	margin-bottom:16em;
+}
+
+.contact__group{
+	@include span(1 at 1);
+	min-width: 225px;
+	font-size: 95%;
+}
+
+.contact__header{
+	font-size: inherit;
+	min-height: 1.6em;
+}
+
+.contact__item{
+	margin-bottom: 1.2em;
+
+	> a[href]{
+		@include nav_link();
+	}
+}
+
+@include respond-to(mobile) {
+	$contact__small: (
+	  	columns: 1,
+	  	gutters: 0,
+	);
+
+	.contact{
+		@include layout($contact__small);
+		margin-bottom: 0;
+	}
+
+	.contact__group{
+		@include span(1 at 1);	
+		margin-right: 0;
+	}
+
+	.contact__header{
+		min-height: 0;
+	}
+}
+
+@include respond-to(small) {
+	$contact__small: (
+	  	columns: 3,
+	  	gutters: 0,
+	);
+
+	.contact{
+		@include layout($contact__small);
+	}
+
+	.contact__group{
+		@include span(1 at 1);	
+		margin-right: 0;
+	}
+}

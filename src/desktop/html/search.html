@@ -15,55 +15,60 @@
 
     	<div id='content' class="wrapper">
 
-	        {{> template-parts/header}}
+    		<div class="wrapper__content">
 
-	        <main class="main">
+		        {{> template-parts/header}}
 
-	        	<div class="page search">
+		        <main class="main">
 
-	        		<div class="page__aside aside">
-                        
-                        <header class="aside__header">
-                            <h3 class="aside__title"></h3>
-                        </header>
+		        	<div class="page main__section search page--sidebar">
 
-                        <div class="aside__body">
-                            {{> template-parts/search-form}}
-                        </div>
+		        		<div class="page__content">
+
+							<header class="page__header">
+								<h1 class="page__title">
+									Search results for: lorem
+								</h1>
+							</header>
+
+							<section class="main__section">
+				        		{{> template-parts/article-excerpt image='images/summer_01.jpg'}}
+				        	</section>
+
+							<hr class="divider">
+
+							<section class="main__section">
+				        		{{> template-parts/article-excerpt image='images/summer_02.jpg'}}
+				        	</section>
+
+				        	<hr class="divider">
+							
+							<section class="main__section">
+				        		{{> template-parts/article-excerpt image='images/summer_03.jpg'}}
+				        	</section>
+
+			        	</div>
+
+			        	<div class="page__aside aside">
+
+	                        <div class="aside__body">
+	                        	<section id="search-3" class="widget widget_search">
+									{{> template-parts/search-form}}
+								</section>
+	                            <section id="text-3" class="widget widget_text">
+	                            	<h4 class="widget-title">No luck finding what you’re looking for?</h4>
+	                            	<div class="textwidget"></div>
+								</section>
+	                        </div>
+			        	</div>
+
 		        	</div>
+			
+				</main>
 
+		        {{> template-parts/footer}}
 
-	        		<div class="page__content">
-
-						<header class="page__header">
-							<h1 class="page__title">
-								Search results for: lorem
-							</h1>
-						</header>
-
-						<section class="main__section">
-			        		{{> template-parts/article-excerpt image='images/summer_01.jpg'}}
-			        	</section>
-
-						<hr class="divider">
-
-						<section class="main__section">
-			        		{{> template-parts/article-excerpt image='images/summer_02.jpg'}}
-			        	</section>
-
-			        	<hr class="divider">
-						
-						<section class="main__section">
-			        		{{> template-parts/article-excerpt image='images/summer_03.jpg'}}
-			        	</section>
-
-		        	</div>
-
-	        	</div>
-		
-			</main>
-
-	        {{> template-parts/footer}}
+	        </div>
 
         </div>
 

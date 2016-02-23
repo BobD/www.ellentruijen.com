@@ -25,11 +25,27 @@ require([
             $('.carrousel').addClass('carrousel--slicked');
             $('.carrousel').removeClass('carrousel--default');
 
-            $('.carrousel__list').slick({
-                // autoplay: true,
-                speed: 400,
-                pauseOnHover: true,
-                easing: 'swing'
+            $('.carrousel__list').each(function(){
+                var $list = $(this);
+                var autoplay =  $list.is('.carrousel__list--auto-play');
+                var random =  $list.is('.carrousel__list--random');
+                var dots =   $list.is('.carrousel__list--dots');
+                var initialSlide = 0;
+
+                if(random){
+                    initialSlide = Math.floor(Math.random() * $list.find('.carrousel__item').length);
+                }
+
+                $list.slick({
+                    dots: dots,
+                    speed: 500,
+                    autoplaySpeed: 4000,
+                    pauseOnHover: true,
+                    easing: 'swing',
+                    autoplay: autoplay,
+                    initialSlide: initialSlide
+                });
+
             });
 
             $('.carrousel__list').on('beforeChange', function(event, slick, currentSlide, nextSlide){

@@ -10,7 +10,7 @@
 			{"id": "about", "title": "About", "url": "pages/ellentruijen/about.html"},
 			{"id": "campaign", "title": "Campaign", "url": "pages/ellentruijen/campaign.html"},
 			{"id": "brandstore", "title": "Brandstore", "url": ""},
-			{"id": "side_projects", "title": "Side Projects", "url": ""},
+			{"id": "sideprojects", "title": "Side Projects", "url": "pages/ellentruijen/sideprojects.html"},
 			{"id": "et_vintage", "title": "ET Vintage", "url": ""},
 			{"id": "et_care", "title": "ET Care", "url": ""},
 			{"id": "press", "title": "Press", "url": ""},

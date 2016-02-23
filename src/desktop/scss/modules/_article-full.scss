@@ -1,7 +1,6 @@
 .article{
 	
 	&--full{
-		margin: 0 auto;
 		text-align: left;
 
 		.article__header{
@@ -11,13 +10,11 @@
 
 		.article__title{
 			@include span(3 at 1);
-			@include font-bold();
 			font-size: inherit;
 		}
 
 		.article__date{
-			@include span(1 at 4);
-			@include font-bold();
+			@include span(2 at 4);
 			text-align: right;
 			font-size: inherit;
 		}
@@ -45,9 +42,5 @@
 
 @include respond-to(small) {
 	.article{
-
-		&--full{
-			width: 100%;
-		}
 	}
 }

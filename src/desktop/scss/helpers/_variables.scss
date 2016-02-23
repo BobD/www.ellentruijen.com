@@ -1,23 +1,36 @@
 // Base
 $background-color:					white;
-$text-color:						#010101;
+$text-default-color:				#010101;
+$text-content-color:				#212121;
 $link-color:						#010101;
 $theme-grey:						#a1a1a1;
 $theme-grey-dark:					#616161;
 $transition-duration:				0.2s;
 
 // Layout
-$container-width-large:				1200px;
-$row-v-margin:						emRhythm(10);
+$container-width-large:				1222px;
+$row-v-margin:						50px;
 $mobile-padding:					16px;
-$mobile-offset-top:					5em;
-$tablet-padding:					16px; // small/medium
-$desktop-padding:					16px; // large
+$mobile-offset-top:					70px;
+$tablet-padding:					25px; // small/medium
+$desktop-padding:					25px; // large
+$header-line-height: 				25px;
 
 // Typo
-$base-font-size: 					16px;
+$base-font-size: 					13px;
+$text-line-height:					1.6em;
 $link-font-size: 					13px;
+$nav-font-size: 					11px;
 $line-height: 						1.6;
+
+// Various
+$divider-line:						thin solid $theme-grey;
+
+// Shared Susy layouts
+$article--excerpt-header: (
+	columns: 5
+);
+
 
 
 // Responsive
@@ -34,4 +47,5 @@ $breakpoints: (
   'small'  			: '#{$screen} ( min-width: 480.1px )  and ( max-width: 768px )',
   'medium'  		: '#{$screen} ( min-width: 768.1px )  and ( max-width: #{$container-width-large} )',
   'large' 			: '#{$screen} ( min-width: #{$container-width-large}  )',
+  'header_wrap'  	: '#{$screen} ( max-width: 1000px )',
 );

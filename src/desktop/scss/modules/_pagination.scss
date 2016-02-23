@@ -1,0 +1,42 @@
+.pagination{
+
+
+	h2,
+	.nav-links{
+		display: inline-block;
+		color: $theme-grey-dark;
+	}
+
+	h2{
+		@include font-regular();
+		font-size: inherit;
+		text-transform: uppercase;
+	}
+
+	.page-numbers{
+		text-decoration: none;
+		display: inline-block;
+		color: inherit;
+
+		&:hover{
+			color: $text-color;
+		}
+
+		&.current{
+			text-decoration: underline;
+		}
+
+		&:after{
+			content: '\2013';
+			display: inline-block;
+			margin-left: .2em;
+			vertical-align: middle;
+		}
+
+		&:last-child{
+			&:after{
+				display: none;
+			}
+		}
+	}
+}

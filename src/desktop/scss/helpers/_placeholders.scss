@@ -23,9 +23,15 @@ $divider: thin solid $theme-grey;
 }
 
 %text-body-styles{
+	line-height: $text-line-height;
+	color: $text-content-color;
+
 	h1,
 	h2,
-	h3{
+	h3,
+	h4,
+	h5{
+		@include font-regular();
 		margin-bottom: .5em;
 	}
 
@@ -35,5 +41,19 @@ $divider: thin solid $theme-grey;
 
 	a{
 		@include nav-link();
+	}
+
+	img{
+		max-width: 100%;
+		height: auto;
+
+		&.size-full{
+			width: 100%;
+		}
+	}
+
+
+	> strong{
+		display: block;
 	}
 }

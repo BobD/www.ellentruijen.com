@@ -10,5 +10,47 @@
 }
 
 .aside__body{
-	@extend %text-body-styles;
+	section{
+		margin-bottom: emRhythm(4);
+
+		h4{
+			@include font-bold();
+			margin-bottom: emRhythm(2);
+		}
+	}
+}
+
+.aside__post-list{
+
+}
+
+.aside__post{
+	display: block;
+	margin-bottom: emRhythm(6);
+	color: inherit;
+
+	&:hover{
+		.aside__post-link:before{
+			width: 100%;
+		}
+	}
+}
+
+.aside__post-image{
+	width: 100%;
+	height: auto;
+}
+
+.aside__post-footer{
+	text-align: left;
+}
+
+.aside__post-info{
+
+}
+
+.aside__post-link{
+	@include nav-link();
+	font-size: inherit !important;
+	text-transform: none !important;
 }

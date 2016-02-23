@@ -1,6 +1,6 @@
 .logo,
 .navigation{
-	line-height: 30px;
+	line-height: $header-line-height;
 }
 
 .logo{
@@ -8,7 +8,7 @@
 }
 
 .logo__link{
-	@include logo();
+	@include logo($header-line-height);
 	color: inherit;
 	text-decoration: none;
 }

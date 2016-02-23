@@ -36,6 +36,7 @@ module.exports = function(grunt) {
             files: [
                 {expand: true, cwd: 'src/desktop/images/', src: ['**/*.*'], dest: 'build/desktop/images', filter: 'isFile'},
                 {expand: true, cwd: 'src/desktop/scripts', src: ['**/*.*'], dest: 'build/desktop/scripts', filter: 'isFile'},
+                {expand: true, cwd: 'src/desktop/fonts', src: ['**/*.*'], dest: 'build/desktop/fonts', filter: 'isFile'},
                 {expand: true, cwd: 'bower_components/', src: ['**/*.*'], dest: 'build/desktop/scripts/vendors', filter: 'isFile'},
                 {src: 'src/desktop/html/backgroundsize.min.htc',  dest: 'build/desktop/backgroundsize.min.htc'},
                 {src: 'src/desktop/html/.htaccess',  dest: 'build/desktop/.htaccess'}
@@ -45,6 +46,7 @@ module.exports = function(grunt) {
             files: [
                 {expand: true, cwd: 'src/mobile/images/', src: ['**/*.*'], dest: 'build/mobile/images', filter: 'isFile'},
                 {expand: true, cwd: 'src/mobile/scripts', src: ['**/*.*'], dest: 'build/mobile/scripts', filter: 'isFile'},
+                {expand: true, cwd: 'src/desktop/fonts', src: ['**/*.*'], dest: 'build/desktop/fonts', filter: 'isFile'},
                 {expand: true, cwd: 'bower_components/underscore/', src: ['underscore-min.*'], dest: 'build/mobile/scripts/vendors/underscore', filter: 'isFile'},
                 {src: 'bower_components/fastclick/lib/fastclick.js',  dest: 'build/mobile/scripts/vendors/fastclick.js'}
             ]
@@ -134,7 +136,7 @@ module.exports = function(grunt) {
             options: {
                 authKey: "bdcreations",
                 host: "ftp.bdcreations.nl",
-                dest: "/domains/bdcreations.nl/public_html/projects/ellentruijen/",
+                dest: "/domains/bdcreations.nl/public_html/projects/ellentruijen-proto/",
                 port: 21
             },
             files: [

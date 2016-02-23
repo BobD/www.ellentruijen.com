@@ -1,26 +1,33 @@
 $header: (
-  columns: 5
+  columns: 7
 );
 
 .header{
 }
 
 .header__main{
+	@include layout($header);
 	@extend %divider-bottom;
-	padding: 2em 0 1.5em 0;
+	@extend %clearfix;
+
+	padding-top: 1.2em;
+	padding-bottom: 1.8em;
 }
 
 .header__logo,
 .header__navigation{
-	line-height: 30px;
+	line-height: $header-line-height;
 	display: inline-block;
 	vertical-align: middle;
 }
 
-.header__logo{
-	margin-right: 2em;
-	width: 200px;
+.header__logo,
+.header__pages-empty{
+	@include span(1 at 1); 
+	min-width: 170px;
+}
 
+.header__logo{
 	.logo{
 		position: relative;
 		top: 4px;
@@ -28,6 +35,7 @@ $header: (
 }
 
 .header__navigation{
+	@include span(4 at 2); 
 
 	.navigation__link{
 		vertical-align: bottom;
@@ -35,36 +43,26 @@ $header: (
 }
 
 .header__pages{
+	@include layout($header);
 	@extend %clearfix;
-	position: relative;
-	height: $row-v-margin;
-	padding: .5em 0;
 
-	// Keep these specs in sync with the logo dimensions
-	left: 2em;
-	margin-left: 205px;
+	position: relative;
+	min-height: 3.5em;
+	padding: 0.9em 0 1.4em 0;
 }
 
 .header__pages-list{
-	line-height: $row-v-margin;
+	line-height: 4em;
 }
 
 @include respond-to(medium) {
-
 	.header__pages{
 	}
 }
 
-@include respond-to(small) {
-	.header__pages{
-		height: auto;
-		margin-bottom: $row-v-margin;
-		left: 0;
-		margin-left: 0;
-		
-		.navigation__item {
-			margin-right: 1em;
-		}
+@include respond-to(header_wrap) {
+	.header__pages-empty{
+		display: none;
 	}
 }
 

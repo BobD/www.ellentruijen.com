@@ -37,9 +37,68 @@ $carrousel__footer: (
     		background-image: url('../images/static/arrow_prev_w.svg');
 		}
 	}
+
+	.slick-dots{
+		width: 100%;
+		text-align: center;
+		position: relative;
+		top: -3em;
+		color: white;
+
+		> li{
+			display: inline-block;
+			font: normal normal normal 14px/1 FontAwesome;
+			position: relative;
+			margin: 0 .25em;
+			cursor: pointer;
+
+			button{
+				border: none;
+    			outline: none;
+    			background: transparent;
+    			color: transparent;
+    			font-size: 0;
+			}
+
+			&:before{
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 1em;
+				height: 1em;
+				background: transparent;
+				border: thin solid white;
+			}
+			
+			&:hover,
+			&.slick-active{
+				&:before{
+					background: white;
+				}
+			}
+		}
+	}
+}
+
+.carrousel__list-container{
+    display: block;
+    content: "";
+    width: 100%;
+   overflow: hidden;
+}
+
+.carrousel__list-container > .carrousel__list{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }
 
 .carrousel__list{
+
+
 }
 
 .carrousel__item{
@@ -96,26 +155,31 @@ $carrousel__footer: (
 .carrousel{
 
 	.js &{
-		display: none;
+		.carrousel__item{
+			visibility: hidden;
+		}
 	}
 
 	&--default{
 	}
 
 	&--slicked{
-		display: block !important;
 
 		.carrousel__list{
-			margin-bottom: 2em;
+
 		}
 
 		.carrousel__item{
-			// margin-right: 2em;
+			visibility: visible !important;
 			margin-bottom: 0;
 		}
 
 		.carrousel__info{
 			display: none;
+		}
+
+		.carrousel__footer{
+			margin-top: $row-v-margin / 2;
 		}
 	}
 

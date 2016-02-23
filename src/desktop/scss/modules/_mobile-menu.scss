@@ -27,7 +27,8 @@
 }
 
 .mobile-menu__nav{
-    padding-bottom: 1em;
+    padding-top: $mobile-padding;
+    padding-bottom: $mobile-padding;
 }
 
 .mobile-menu__nav-pages{
@@ -39,6 +40,37 @@
     display: block;
   }
 }
+
+@include respond-to(small) {
+  .mobile-menu{
+    display: none !important;
+  }
+
+  .slideout-panel{
+    transform: none !important;
+  }
+}
+
+@include respond-to(medium) {
+  .mobile-menu{
+    display: none !important;
+  }
+
+  .slideout-panel{
+    transform: none !important;
+  }
+}
+
+@include respond-to(large) {
+  .mobile-menu{
+    display: none !important;
+  }
+
+  .slideout-panel{
+    transform: none !important;
+  }
+}
+
 
 
 // See https://github.com/Mango/slideout

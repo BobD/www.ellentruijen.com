@@ -19,6 +19,19 @@ $main__section--information: (
 
 .main{
 	min-height: 100px;
+
+	&--small{
+		.page__body,
+		.article__content{
+			max-width: 88%;
+		}
+	}
+
+	&--background-image{
+		background-repeat: no-repeat;
+		background-size: 50%;
+		background-position: right bottom;
+	}
 }
 
 .main__section{
@@ -28,6 +41,10 @@ $main__section--information: (
 
 	&:first-child{
 		margin-top: 0;
+	}
+
+	&:last-child{
+		margin-bottom: $row-v-margin / 2;
 	}
 }
 
@@ -69,7 +86,7 @@ $main__section--information: (
 		}
 	}
 
-	&--information{
+	&--split{
 		 display: flex;
 		.main__block{
 			display: flex;
@@ -104,22 +121,20 @@ $main__section--information: (
 	}
 }
 
-@include respond-to(mobile) {
-	.main__section{
-		&--small{
-			.main__block{
-				width: auto;
-				margin: auto;
-			}
-		}
-	}
-}
-
 @include respond-to(small) {
 	$main__section-tablet: (
 		columns: 2,
 		output: float
 	);
+
+	.main{
+		&--small{
+			.page__body,
+			.article__content{
+				max-width: none;
+			}
+		}
+	}
 
 	.main__section{
 		&--column-2,
@@ -142,6 +157,27 @@ $main__section--information: (
 
 @include respond-to(mobile) {
 
+	.main{
+		&--small{
+			.page__body,
+			.article__content{
+				max-width: none;
+			}
+		}
+
+		&--background-image{
+			background-image: none !important;
+		}
+	}
+
+	.main__section{
+		&--small{
+			.main__block{
+				width: auto;
+				margin: auto;
+			}
+		}
+	}
 
 	.main__section{
 		&--column-2,

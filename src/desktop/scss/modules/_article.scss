@@ -4,7 +4,7 @@
 }
 
 .article__image-container{
-	margin-bottom: .8em;
+	margin-bottom: 1.5em;
 }
 
 .article__image{
@@ -13,7 +13,7 @@
 }
 
 .article__header{
-	margin: emRhythm(2) 0;
+	margin: emRhythm(1) 0;
 
 	&:first-child{
 		margin-top: 0;
@@ -27,21 +27,10 @@
 }
 
 .article__body{
-	p{
-		margin-bottom: 1em;
-	}
+	@extend %text-body-styles;
 
-	> strong{
-		display: block;
-	}
-
-	a{
-		@include nav-link();
-	}
-
-	img{
-		width: 100%;
-		display: block;
+	.more-link{
+		display: none;
 	}
 
 	> *{
@@ -55,13 +44,5 @@
 
 .article__link{
 	@include nav-link();
-
-	 > *{
-	 	display: inline-block;
-	 	vertical-align: middle;
-	 }
-	 
-	 .icon{
-	 	margin-left: .2em;
-	 }
+	color: $text-content-color;
 }

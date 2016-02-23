@@ -12,10 +12,34 @@ $page__header: (
 
 	@include layout($page);
 	@extend %clearfix;
+
+	&--sidebar{
+		.page__content{
+			@include span(5 at 1);
+		}
+
+		.page__aside{
+			@include span(1.5 at 6.5);
+		}
+
+	}
 }
 
 .page__content{
-	@include span(5 at 1);
+
+	&--divided{
+		padding: ($row-v-margin / 2) 0 0 0;
+		border-top: $divider-line;
+		border-bottom: $divider-line;
+
+		&:only-child{
+			border-bottom: 0;
+		}
+
+		p:last-child{
+			margin-bottom: 0;
+		}
+	}
 }
 
 .page__header{
@@ -44,25 +68,34 @@ $page__header: (
 }
 
 .page__aside{
-	@include span(2 at 6);
 	position: relative;
 }
 
+
+
 // Vertical rhytm 
 // http://typesettings.io/
-.page__header,
-.page__aside .aside__header{
+.page__header{
 	margin-bottom: emRhythm(2);
 }
 
 .page__header-left,
 .page__header-right,
-.page__aside .aside__header{
+.page__aside .aside__body > section:first-child{
 	&:after{
 		content: '';
 		width: 0;
 		height: emRhythm(8);
 		display: inline-block;
+		//background: red;
+	}
+}
+
+.page__aside .aside__body > section:first-child{
+	> *{
+		display: inline-block;
+		vertical-align: bottom;
+		line-height: emRhythm(8);
 	}
 }
 
@@ -81,6 +114,15 @@ $page__header: (
 
 
 @include respond-to(mobile) {
+	.page{
+		&--sidebar{
+			.page__content,
+			.page__aside{
+				@include span(7 at 1);
+			}
+		}
+	}
+
 	.page__header-left,
 	.page__header-right,
 	.page__aside .aside__header{
@@ -89,9 +131,12 @@ $page__header: (
 		}
 	}
 
-	.page__content,
-	.page__aside{
-		@include span(6 at 1);
+	.page__content{
+
+		&--divided{
+			padding-top: .2em;
+			border-top: 0;
+		}
 	}
 
 	.page__aside{
@@ -100,7 +145,7 @@ $page__header: (
 
 	.page__header-left,
 	.page__header-right{
-		@include span(6 at 1);
+		@include span(7 at 1);
 	}
 
 	.page__header-right{

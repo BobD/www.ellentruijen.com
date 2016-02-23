@@ -1,10 +1,10 @@
 $footer__navigation: (
-  	columns: 7,
+  	columns: 6,
   	output: float
 );
 
 $footer__info: (
- 	columns: 7,
+ 	columns: 6,
   	output: float,
 );
 
@@ -15,12 +15,16 @@ $footer__contact: (
 
 .footer{
 	@extend %divider-top;
-	padding-top: 2em;
-	font-size: $link-font-size;
+	padding: 2em 0 $tablet-padding 0;
+	font-size: $nav-font-size;
 	line-height: $line-height;
 
 	a{
 		@include nav_link();
+	}
+
+	body.home &{
+		border-top: none;
 	}
 }
 
@@ -33,12 +37,12 @@ $footer__contact: (
 	&--c1{@include span(1 at 1);}
 	&--c2{@include span(1 at 2);}
 	&--c3{@include span(1 at 3);}
-	&--c4{@include span(3 at 4);}
-	&--c5{@include span(1 at 7);}
+	&--c4{@include span(2 at 4);}
+	&--c5{@include span(1 at 6);}
 }
 
 .footer__header{
-	margin-bottom: 1em;
+	margin-bottom: 1.5em;
 	text-transform: uppercase;
 }
 
@@ -84,6 +88,7 @@ $footer__contact: (
 
 .footer__info{
 	@include layout($footer__info);
+	@extend %clearfix;
 	margin-top: 1em;
 }
 
@@ -106,11 +111,12 @@ $footer__contact: (
 }
 
 .footer__social{
-	@include span(1 at 7);
+	@include span(1 at 6);
+
 	position: relative;
  	color: $theme-grey;
  	height: emRhythm(6);
- 	top: - emRhythm(6);
+ 	top: - emRhythm(9);
 }
 
 .footer__social-item{
@@ -120,7 +126,8 @@ $footer__contact: (
 
 .footer__social-link{
 	color: inherit;
-	font-size: 1.5em !important;
+	font-size: 2em !important;
+	margin-right: .2em;
 
 	&:hover{
 		color: $theme-grey-dark;
