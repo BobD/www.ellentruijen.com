@@ -35,7 +35,8 @@
 		text-align: left;
 
 		&--excerpt{
-			width: 100%;
+			width: 100% !important;
+
 			.article__title{
 				@include span(4 at 1);
 			}

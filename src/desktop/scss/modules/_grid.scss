@@ -9,11 +9,26 @@
 .grid__item{
 	@include ratio_block('.grid__content');
 	margin-bottom: gutter(2.25);
+	position: relative;
+	
+	*[data-pin-href]{
+		position: absolute;
+		top: .8em;
+		left: .8em;
+		z-index: 1;
+		display: none;
+	}
+
+	&:hover{
+		*[data-pin-href]{
+			display: block;
+		}
+	}
 }
 
 .grid__content{
 	@extend %background-image;
-	padding: ($desktop-padding / 2) $desktop-padding;
+	// padding: ($desktop-padding / 2) $desktop-padding;
 
 	&:hover{
 		.grid__header{
@@ -30,14 +45,14 @@
 	position: absolute;
 	top: 100%;
 	color: $text-content-color;
-	font-size: 95%;
+	// font-size: 95%;
 	margin-top: .8em;
 
 	.grid__link,
 	.grid__info{
 		display: inline-block;
 	 	vertical-align: middle;
-	 	line-height: 1.5;
+	 	line-height: 1;
 	}
 }
 

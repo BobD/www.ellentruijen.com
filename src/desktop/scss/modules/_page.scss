@@ -131,8 +131,13 @@ $page__header: (
 		}
 	}
 
-	.page__content{
+	.page__content,
+	.page__aside{
+		float: none !important;
+	}
 
+
+	.page__content{
 		&--divided{
 			padding-top: .2em;
 			border-top: 0;
@@ -141,6 +146,7 @@ $page__header: (
 
 	.page__aside{
 		text-align: left !important;
+		margin-top: 1em;
 	}
 
 	.page__header-left,

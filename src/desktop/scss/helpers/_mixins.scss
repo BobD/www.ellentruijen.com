@@ -39,7 +39,7 @@
     display: inline-block;
     position: relative;
     line-height: 1;
-    font-size: 95%;
+    font-size: $link-font-size;
   
     &:before{
         content: '';
@@ -68,6 +68,12 @@
 
     .icon{
         margin-left: .2em;
+    }
+
+    &:first-child{
+        .icon{
+            margin-left: 0;
+        }
     }
 
     > *{

@@ -16,11 +16,13 @@ $footer__contact: (
 .footer{
 	@extend %divider-top;
 	padding: 2em 0 $tablet-padding 0;
-	font-size: $nav-font-size;
+	font-size: $nav-font-size * 0.9;
 	line-height: $line-height;
 
 	a{
 		@include nav_link();
+		line-height: 1.2;
+		font-size: 100%;
 	}
 
 	body.home &{
@@ -47,17 +49,21 @@ $footer__contact: (
 }
 
 .footer__item{
-
+	&.inactive{
+		pointer-events: none;
+		cursor: default;
+		color: $theme-grey;
+	}
 }
 
 .footer__link{
-	@include nav_link();
 }
 
 
 .footer__contact{
 	@include layout($footer__contact);
 	width: 100%;
+	// font-size: $link-font-size;
 }
 
 .footer__address{
@@ -106,7 +112,7 @@ $footer__contact: (
 .footer__newsletter{
 	@include span(2 at 4);
 	position: relative;
-	height: emRhythm(6);
+	height: emRhythm(4);
 	top: - emRhythm(6);
 }
 
@@ -116,7 +122,7 @@ $footer__contact: (
 	position: relative;
  	color: $theme-grey;
  	height: emRhythm(6);
- 	top: - emRhythm(9);
+ 	top: - emRhythm(6);
 }
 
 .footer__social-item{
@@ -129,6 +135,10 @@ $footer__contact: (
 	font-size: 2em !important;
 	margin-right: .2em;
 
+	&:before{
+		display: none !important;
+	}
+
 	&:hover{
 		color: $theme-grey-dark;
 	}
@@ -140,8 +150,18 @@ $footer__contact: (
 }
 
 @include respond-to(mobile) {
+	$footer__mobile: (
+		columns: 1,
+		container: 100%,
+		output: float
+	);
+
 	.footer{
 		font-size: inherit;
+	}
+
+	.footer__navigation{
+		@include layout($footer__mobile);
 	}
 
 	.footer__header{
@@ -149,11 +169,11 @@ $footer__contact: (
 	}
 
 	.footer__section{
-		&--c1{@include span(7 at 2);}
-		&--c2{@include span(7 at 3);}
-		&--c3{@include span(7 at 4);}
-		&--c4{@include span(7 at 1);}
-		&--c5{@include span(7 at 5);}
+		&--c1{@include span(1 at 1);}
+		&--c2{@include span(1 at 2);}
+		&--c3{@include span(1 at 3);}
+		&--c4{@include span(1 at 4);}
+		&--c5{@include span(1 at 5);}
 
 		margin-bottom: 1em;
 	}
@@ -162,7 +182,7 @@ $footer__contact: (
 
 		&--one,
 		&--two{
-			@include span(7 at 1); 
+			@include span(1 at 1); 
 			margin-bottom: 1em;
 		}
 
@@ -171,7 +191,7 @@ $footer__contact: (
 	.footer__newsletter,
 	.footer__social,
 	.footer__copy{
-		@include span(7 at 1);
+		@include span(1 at 1);
 		margin-bottom: 1em;
 	}
 

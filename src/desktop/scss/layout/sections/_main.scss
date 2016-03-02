@@ -177,6 +177,32 @@ $main__section--information: (
 				margin: auto;
 			}
 		}
+
+		&--split{
+			display: block;
+			.main__block{
+				display: block;
+				padding-right: 0;
+
+				&--first,
+				&--last{
+					width: 100%;
+					float: none;
+				}
+
+				.article__header{
+					text-align: center;
+				}
+
+				.visual{
+					position: relative;
+					top: auto;
+					right: auto;
+					bottom: auto;
+					left: auto;
+				}
+			}
+		}
 	}
 
 	.main__section{

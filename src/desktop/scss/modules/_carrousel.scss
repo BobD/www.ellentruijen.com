@@ -47,9 +47,8 @@ $carrousel__footer: (
 
 		> li{
 			display: inline-block;
-			font: normal normal normal 14px/1 FontAwesome;
 			position: relative;
-			margin: 0 .25em;
+			margin: 0 .175em;
 			cursor: pointer;
 
 			button{
@@ -65,8 +64,8 @@ $carrousel__footer: (
 				position: absolute;
 				top: 0;
 				left: 0;
-				width: 1em;
-				height: 1em;
+				width: 0.8em;
+				height: 0.8em;
 				background: transparent;
 				border: thin solid white;
 			}

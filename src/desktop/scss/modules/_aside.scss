@@ -26,8 +26,9 @@
 
 .aside__post{
 	display: block;
-	margin-bottom: emRhythm(6);
+	margin-bottom: emRhythm(5);
 	color: inherit;
+	text-decoration: none;
 
 	&:hover{
 		.aside__post-link:before{
@@ -45,12 +46,18 @@
 	text-align: left;
 }
 
-.aside__post-info{
-
+.aside__post-title{
+	text-transform: uppercase;
 }
 
 .aside__post-link{
 	@include nav-link();
-	font-size: inherit !important;
-	text-transform: none !important;
+}
+
+.aside__post-link,
+.aside__post-title{
+	display: inline-block;
+	vertical-align: text-bottom;
+	line-height: 1;
+	// font-size: 0.85em;
 }

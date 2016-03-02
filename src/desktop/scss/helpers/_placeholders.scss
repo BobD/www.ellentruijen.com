@@ -32,6 +32,7 @@ $divider: thin solid $theme-grey;
 	h4,
 	h5{
 		@include font-regular();
+		font-size: inherit;
 		margin-bottom: .5em;
 	}
 
