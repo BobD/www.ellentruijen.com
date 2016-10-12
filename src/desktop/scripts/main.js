@@ -73,5 +73,28 @@ require([
             $('#mobile-close').toggle();
         })
 
+
+
+        //  Responsive videos
+        var $allVideos = $("iframe");
+        $allVideos.each(function() {
+            $(this)
+                .data('aspectRatio', this.height / this.width)
+                .removeAttr('height')
+                .removeAttr('width');
+        });
+
+        $(window).resize(function() {
+            $allVideos.each(function() {
+                var $el = $(this);
+                var $parent = $el.parent();
+                var newWidth = $parent.width();
+                $el
+                .width(newWidth)
+                .height(newWidth * $el.data('aspectRatio'));
+
+            });
+        }).resize();
+
 	}
 );

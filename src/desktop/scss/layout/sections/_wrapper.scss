@@ -1,11 +1,11 @@
 // http://susy.oddbird.net/
 $susy: (
-  container: $container-width-large,
   global-box-sizing: border-box
 );
 
 .wrapper{
 	@include container;
+	max-width: $container-width-large;
 }
 
 @include respond-to(medium) {

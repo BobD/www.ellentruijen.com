@@ -29,6 +29,10 @@
 .mobile-menu__nav{
     padding-top: $mobile-padding;
     padding-bottom: $mobile-padding;
+
+    .header__cart-link{
+      margin-bottom: 1em;
+    }
 }
 
 .mobile-menu__nav-pages{

@@ -3,6 +3,18 @@ $header: (
 );
 
 .header{
+	.logo,
+	.navigation,
+	.header__cart{
+		line-height: $header-line-height;
+	}
+
+	.header__cart-link{
+		display: inline-block;
+    	vertical-align: text-top;
+    	position: relative;
+    	top: 2px;
+	}
 }
 
 .header__main{
@@ -53,6 +65,43 @@ $header: (
 
 .header__pages-list{
 	line-height: 4em;
+}
+
+.header__aside{
+	text-align: right;
+	
+	.navigation,
+	.header__cart{
+		display: inline-block;
+	}
+
+	.navigation__link{
+		vertical-align: bottom;
+	}
+}
+
+.header__cart{
+}
+
+.header__cart-link{
+	color: inherit;
+	text-decoration: none;
+	text-transform: uppercase;
+
+	span{
+		vertical-align: middle;
+		display: inline-block;
+		margin-right: .5em;
+	}
+}
+
+.header__cart-icon{
+}
+
+.header__cart-icon,
+.header__cart-quantity{
+	display: inline-block;
+	vertical-align: middle;
 }
 
 @include respond-to(medium) {

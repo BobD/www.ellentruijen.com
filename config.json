@@ -1,6 +1,7 @@
 {
-	"distribute": {
-		"local": "/Applications/AMPPS/www/et_dev/wp-content/themes/et_twentysixteen/"
+	"export": {
+		"local": "/Applications/MAMP/htdocs/ellentruijen.dev/wp-content/themes/et_twentysixteen/"
 	}
 
 }
+

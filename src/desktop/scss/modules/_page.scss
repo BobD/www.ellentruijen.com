@@ -14,6 +14,7 @@ $page__header: (
 	@extend %clearfix;
 
 	&--sidebar{
+
 		.page__content{
 			@include span(5 at 1);
 		}
@@ -22,6 +23,18 @@ $page__header: (
 			@include span(1.5 at 6.5);
 		}
 
+	}
+
+	&--sidebar-left{
+		
+		.page__content{
+			@include span(6 at 2);
+			padding-left: 2em;
+		}
+
+		.page__aside{
+			@include span(1 at 1);
+		}
 	}
 }
 
@@ -40,6 +53,18 @@ $page__header: (
 			margin-bottom: 0;
 		}
 	}
+
+		h1,
+	h2,
+	h3,
+	h4,
+	h5{
+		text-transform: uppercase;
+		font-size: $nav-font-size;
+	}
+}
+
+.page_body{
 }
 
 .page__header{

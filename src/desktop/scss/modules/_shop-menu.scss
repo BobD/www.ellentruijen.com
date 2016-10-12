@@ -1,0 +1,59 @@
+.aside__woocommerce > .shop-menu > li{
+	&:first-child{
+		margin-top: -.6em;
+	}
+}
+
+.shop-menu{
+	margin-top: .2em;
+	margin-bottom: .2em;
+
+	a{
+		color: $theme-grey-dark;
+		text-decoration: none;
+	}
+
+	ul{
+		margin-right: 1em;
+	}
+
+	li{
+		line-height: 1.6;
+
+		&.active{
+			a{
+				color: $text-default-color;
+				text-decoration: underline;
+			}
+		}
+
+		&:hover{
+			a{
+				color: $text-default-color;
+			}
+		}
+	}
+
+	> li{
+		margin-top: 1em;
+	}
+
+	a{
+		@include nav_link();
+		font-size: $nav-font-size;
+		display: inline-block;
+		color: $theme-grey-dark;
+	}
+
+}
+
+@include respond-to(mobile) {
+	.shop-menu{
+		margin-left: 1em;
+		ul{
+			margin-left: 1em;
+			margin-right: auto;
+		}
+
+	}
+}

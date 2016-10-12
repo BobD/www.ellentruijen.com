@@ -87,10 +87,7 @@ module.exports = function(grunt) {
             }
          },
         mobile: {
-            files: {
-            'build/mobile/css/develop.css': 'src/mobile/scss/develop.scss',
-            'build/mobile/css/style.css': 'src/mobile/scss/style.scss'
-            }
+            files: {}
         }
     },
 

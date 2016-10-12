@@ -1,50 +1,31 @@
 
+Running "export:desktop" (export) task
+
 Running "clean:desktop" (clean) task
->> 1 path cleaned.
+>> 2 paths cleaned.
 
 Running "copy:desktop" (copy) task
-
-Running "autoprefixer:desktop" (autoprefixer) task
-File build/desktop/css/style.css created.
-
-Running "cssmin:desktop" (cssmin) task
-File build/desktop/css/style.min.css created: 47.7 kB → 32.38 kB
-
-Running "html:desktop" (html) task
 Copied 272 files
 
 Running "data:desktop" (data) task
 
 Running "sass:desktop" (sass) task
 
-Running "requirejs:desktop" (requirejs) task
-
 Running "autoprefixer:desktop" (autoprefixer) task
 File build/desktop/css/develop.css created.
 File build/desktop/css/style.css created.
-File build/desktop/css/style.min.css created.
 
 Running "cssmin:desktop" (cssmin) task
-File build/desktop/css/style.min.css created: 47.7 kB → 32.38 kB
+File build/desktop/css/style.min.css created: 56.69 kB → 39.32 kB
 
 Running "html:desktop" (html) task
 
-Done, without errors.
-... Reload src/desktop/scss/modules/_logo.scss ...
-... Reload build/desktop/.htaccess ...
-... Reload src/desktop/scss/layout/sections/_main.scss ...
-... Reload src/desktop/scss/modules/_mobile-menu.scss ...
-... Reload src/desktop/scss/layout/sections/_wrapper.scss ...
-... Reload src/desktop/scss/layout/sections/_footer.scss ...
-... Reload src/desktop/scss/helpers/_mixins.scss ...
-... Reload src/desktop/scss/helpers/_variables.scss ...
-... Reload src/desktop/scss/modules/_page.scss ...
-Completed in 4.239s at Wed Mar 02 2016 16:29:56 GMT+0100 (CET) - Waiting...
+Running "requirejs:desktop" (requirejs) task
 
 Running "copy:dist" (copy) task
-Copied 296 files
+Copied 295 files
 
 Running "copy:export" (copy) task
-Copied 266 files
+Copied 285 files
 
 Done, without errors.

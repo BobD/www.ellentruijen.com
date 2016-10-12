@@ -96,14 +96,14 @@ $carrousel__footer: (
 }
 
 .carrousel__list{
-
-
+	margin-left: 0 !important;
 }
 
 .carrousel__item{
 	display: inline-block;
 	width: 100%;
 	margin-bottom: $row-v-margin;
+	margin-left: 0 !important;
 }
 
 .carrousel__block{
